@@ -1,3 +1,8 @@
 .wrapper {
-    background-image: url('../../images/alternative.jpg');
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0.45) 100%
+    ),
+    url("../../images/alternative.jpg");
 }

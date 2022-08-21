@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from "./components/Homepage/HomePage";
 import Login from "./components/Login/Login";
 import SignPass from "./components/SignPass/SignPass.jsx";
-import ChoosePlan from './components/ChoosePlan/ChoosePlan'
+import ChoosePlan from "./components/ChoosePlan/ChoosePlan";
 import PlanForm from "./components/PlanForm/PlanForm";
 import SignReg from "./components/SignReg/SignReg";
 

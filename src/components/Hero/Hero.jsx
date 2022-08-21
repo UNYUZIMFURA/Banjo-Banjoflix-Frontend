@@ -4,14 +4,14 @@ import Start from "../Start/Start";
 const Hero = () => {
   return (
     <div className="h-[77vh] flex flex-col items-center border-b-[8px] border-b-[#222] div-1">
-      <div className="w-[94.2%] flex items-center justify-between w-full h-[12.35%]">
-        <h1 className="text-[#e50914] font-bold text-4xl">BANJOFLIX</h1>
-        <button className="rounded-[3px] h-[2.3rem] w-[5.3rem] text-[#fff] bg-[#e50914] border-[#e50914] cursor-pointer">
+      <div className="h-[12.35%] w-[94.2%] flex items-center justify-between">
+        <h1 className="text-4xl text-[#e50914] font-bold">BANJOFLIX</h1>
+        <button className="h-[2.3rem] w-[5.3rem] text-[#fff] border-[#e50914] bg-[#e50914] rounded-[3px] cursor-pointer">
           Sign In
         </button>
       </div>
       <div className="h-[48.5%] w-[40%] flex flex-col justify-around text-[#fff] mt-[9rem]">
-        <h1 className="text-[4rem] font-medium text-center leading-[4.2rem]">
+        <h1 className="text-[4rem] text-center font-medium  leading-[4.2rem]">
           Unlimited movies, TV shows, and more.
         </h1>
         <h2 className="text-[1.625rem] text-center">

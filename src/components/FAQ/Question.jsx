@@ -29,10 +29,10 @@ const Question = (props) => {
   return (
     <div className="w-full flex flex-col justify-between">
       <div
-        className="flex items-center justify-between bg-[#303030] h-[8vh] mb-[0.55rem]"
+        className="h-[8vh] flex items-center justify-between bg-[#303030] mb-[0.55rem]"
         id={props.id}
       >
-        <h2 className="ml-[2rem] text-[#fff] text-[1.6rem]">
+        <h2 className="text-[1.6rem] text-[#fff] ml-[2rem] ">
           {props.question}
         </h2>
         <BsPlus
@@ -47,7 +47,7 @@ const Question = (props) => {
 
       {activeQuest === props.id && visibility ? (
         <div className="flex flex-col items-center bg-[#303030] mt-[1px] mb-[0.5rem]">
-          <h1 className="text-[#fff] text-[1.625rem] w-[92%]">
+          <h1 className="w-[92%] text-[#fff] text-[1.625rem]">
             <br />
             {props.answer}
             <br />

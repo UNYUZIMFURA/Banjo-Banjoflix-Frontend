@@ -1,11 +1,11 @@
-import './WhyStyle.css'
+import "./WhyStyle.css";
 
 const WhyUs2 = (props) => {
   return (
-    <div className="flex items-center justify-center h-[48.6vh] border-b-[8px] border-b-[#222] bg-[#000]">
-      <div className="h-full flex flex-col items-center w-[42%] relative">
+    <div className=" h-[48.6vh] flex items-center justify-center border-b-[8px] border-b-[#222] bg-[#000]">
+      <div className="h-full w-[42%] flex flex-col items-center relative">
         <img src={props.img} alt="" className="w-[67%]" />
-        <div className="flex items-center justify-around w-[44%] h-[6.3rem] border-[2px] border-[hsla(0,0%,100%,.25)] rounded-[0.75rem] bg-[#000] absolute top-[16rem] box">
+        <div className="w-[44%] h-[6.3rem] flex items-center justify-around border-[2px] border-[hsla(0,0%,100%,.25)] rounded-[0.75rem] bg-[#000] absolute top-[16rem] box">
           <div className="h-[90%] w-[16%]">
             <img
               className="h-full w-full object-cover"

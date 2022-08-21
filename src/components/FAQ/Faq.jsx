@@ -53,7 +53,7 @@ const Faq = () => {
         </h3>
         <form className="h-[75%] w-full flex items-center justify-center text-[#fff]">
           <input
-            className="h-[62%] w-[66%] text-[#000] placeholder:text-[#8c8c8c] border-[1px] border-[#8c8c8c] indent-2 outline-none "
+            className="h-[62%] w-[66%] text-[#000] placeholder:text-[#8c8c8c] border-[1px] border-[#8c8c8c] indent-2 outline-none"
             placeholder="Email address"
           ></input>
           <button className="h-[62%] w-[25%] bg-[#f40612]">

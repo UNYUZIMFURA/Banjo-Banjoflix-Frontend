@@ -1,7 +1,7 @@
 const WhyUs4 = (props) => {
   return (
-    <div className="flex items-center justify-center h-[55vh] border-b-[8px] border-b-[#222] bg-[#000]">
-      <div className="flex items-center justify-center h-full relative">
+    <div className="h-[55vh] flex items-center justify-center border-b-[8px] border-b-[#222] bg-[#000]">
+      <div className="h-full flex items-center justify-center relative">
         <img src={props.img} alt="" className="w-[77%]" />
         <div className="h-[26.1vh] w-[24.4vw] absolute top-[6rem] left-[5rem]">
           <video className="w-full" autoPlay muted loop>

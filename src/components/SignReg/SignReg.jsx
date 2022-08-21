@@ -1,23 +1,33 @@
-import Header from '../CodeReduction/Header'
-import Footer2 from '../CodeReduction/Footer2'
+import Header from "../CodeReduction/Header";
+import Footer2 from "../CodeReduction/Footer2";
+import Devices from "../../images/devices.png";
 
 const SignReg = () => {
-    return (
-        <div className="flex flex-col justify-between h-screen">
-            <div className="h-[60vh] flex flex-col justify-between items-center">
-<Header />
-<div className='w-[26%] flex flex-col items-center justify-around h-[40vh]'>
-    <div className='w-full h-[15%]'></div>
-    <div className='h-[40%] w-[65%] flex flex-col justify-around items-center'>
-        <h2 className='text-[1.5rem] font-medium leading-[1.9rem] text-center'>Finish setting up your account</h2>
-        <h2 className='text-center text-[gray]'>Banjoflix is personalized for you. Create a password to watch on any device at any time.</h2>
-    </div>
-    <button className='text-[white] h-[3.2rem] w-[15rem] bg-[red] rounded-[3px]'>Next</button>
-</div>
-            </div>
-            <Footer2 height="20vh"/>
+  return (
+    <div className=" h-screen flex flex-col justify-between">
+      <div className="h-[60vh] flex flex-col justify-between items-center">
+        <Header />
+        <div className="h-[40vh] w-[20%] flex flex-col items-center justify-around">
+          <div className="w-4/5 h-[25%] ">
+            <img src={Devices} alt="" className="object-cover" />
+          </div>
+          <div className="h-[48%] w-full flex flex-col items-center justify-between">
+            <h2 className="w-[92%] text-[2rem] text-[#333] font-medium leading-[2.8rem] text-center">
+              Finish setting up your account
+            </h2>
+            <h2 className="w-4/5 text-center text-[#333] text-[1.2rem] leading-[1.8rem]">
+              Banjoflix is personalized for you. Create a password to watch on
+              any device at any time.
+            </h2>
+          </div>
+          <button className="h-[4rem] w-[92%] text-[white] text-[1.3rem] bg-[#e50914] rounded-[3px] mt-[1rem]">
+            Next
+          </button>
         </div>
-    )
-}
+      </div>
+      <Footer2 height="20vh" />
+    </div>
+  );
+};
 
-export default SignReg
+export default SignReg;
