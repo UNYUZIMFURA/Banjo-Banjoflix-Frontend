@@ -6,29 +6,31 @@ import { activeNow } from "../../atoms";
 const Question = (props) => {
   const [visibility, setVisibility] = useState(false);
   const [activeQuest, setActiveQuest] = useRecoilState(activeNow);
+  let [count, setCount] = useState(1);
 
   // Function to make sure only one question is open
 
   function Toggle() {
+    handleClicks();
     setVisibility((prevVisibility) => !prevVisibility);
     setActiveQuest(props.id);
-    setAlignment()
   }
 
-  function setAlignment() {
-    if(activeQuest === props.id && visibility){
-      let question = document.getElementById("question");
-      question.style.marginBottom = 0;
+  function handleClicks() {
+    let question = document.getElementById(props.id);
+    setCount((prevCount) => prevCount + 1);
+    if (count % 2 === 0) {
+      question.style.marginBottom = "0.55rem";
     } else {
-      console.log('Hello')
+      question.style.marginBottom = 0;
     }
-    }
+  }
 
   return (
     <div className="w-full flex flex-col justify-between">
       <div
         className="flex items-center justify-between bg-[#303030] h-[8vh] mb-[0.55rem]"
-        id="question"
+        id={props.id}
       >
         <h2 className="ml-[2rem] text-[#fff] text-[1.6rem]">
           {props.question}
