@@ -1,3 +1,4 @@
+import './Faq.css'
 import { BsPlus } from "react-icons/bs";
 import { useState } from "react";
 import { useRecoilState } from "recoil";
@@ -29,7 +30,7 @@ const Question = (props) => {
   return (
     <div className="w-full flex flex-col justify-between">
       <div
-        className="h-[8vh] flex items-center justify-between bg-[#303030] mb-[0.55rem]"
+        className="h-[8vh] flex items-center justify-between bg-[#303030] mb-[0.55rem] main-quest"
         id={props.id}
       >
         <h2 className="text-[1.6rem] text-[#fff] ml-[2rem] ">
@@ -37,7 +38,7 @@ const Question = (props) => {
         </h2>
         <BsPlus
           onClick={Toggle}
-          className="mr-[1.5rem] cursor-pointer"
+          className="mr-[1.5rem] cursor-pointer icon"
           size={45}
           style={{ color: "white" }}
         />

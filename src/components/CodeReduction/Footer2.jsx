@@ -1,7 +1,9 @@
+import '../SignPass/SignPass.css'
+
 const Footer2 = (props) => {
   return (
     <div
-      className="w-full flex flex-col justify-around text-[#737373] bg-[#f3f3f3]"
+      className="w-full flex flex-col justify-around text-[#737373] bg-[#f3f3f3] footer-2"
       style={{
         height: `${props.height}`,
       }}
@@ -16,8 +18,8 @@ const Footer2 = (props) => {
           <h3>Help Center</h3>
           <h3>Corporate Information</h3>
         </div>
-        <h3 className="mt-[0.3rem]">Terms of Use</h3>
-        <h3 className="mt-[0.3rem]">Privacy</h3>
+        <h3 className="mt-[0.3rem] terms">Terms of Use</h3>
+        <h3 className="mt-[0.3rem] privacy">Privacy</h3>
       </div>
     </div>
   );

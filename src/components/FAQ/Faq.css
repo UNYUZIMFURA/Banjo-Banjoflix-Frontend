@@ -1,0 +1,45 @@
+@media only screen and (max-width: 600px) {
+  .quest-holder > h1 {
+    font-size: 1.625rem;
+  }
+
+  .sub-quest-holder {
+    width: 100%;
+  }
+
+  .main-quest > h2 {
+    font-size: 1.2rem;
+  }
+
+  .main-quest .icon {
+    height: 30px;
+  }
+
+  .form-2 {
+    height: 25vh;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .email-descr {
+    font-size: 1rem;
+  }
+  .real-form {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .real-form > input {
+    height: 2.5rem;
+    width: 80%;
+  }
+
+  .real-form > button {
+    height: 2.5rem;
+    width: 40%;
+  }
+
+  .real-form span {
+    font-size: 1rem;
+  }
+}

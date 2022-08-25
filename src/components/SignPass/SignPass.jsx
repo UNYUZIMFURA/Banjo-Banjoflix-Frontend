@@ -1,12 +1,13 @@
+import './SignPass.css'
 import Footer2 from "../CodeReduction/Footer2";
 import Header from "../CodeReduction/Header";
 
 const SignPass = () => {
   return (
     <div className="h-screen flex flex-col justify-between">
-      <div className="h-[70%] w-full flex flex-col justify-around items-center">
+      <div className="h-[70%] w-full flex flex-col justify-around items-center main-signup">
         <Header />
-        <div className="h-[80%] w-[26%] flex flex-col">
+        <div className="h-[80%] w-[26%] flex flex-col signup-holder">
           <div className="h-[30%] w-full flex flex-col justify-between ">
             <h3 className="text-[0.8rem]">
               STEP <span className="text-[#737373] font-medium">1</span> OF

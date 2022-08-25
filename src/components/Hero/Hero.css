@@ -9,3 +9,63 @@
     url("../../images/alternative.jpg");
   background-size: 100%;
 }
+
+@media only screen and (max-width: 600px) {
+  .div-1 {
+    height: 60vh;
+    justify-content: center;
+  }
+
+  .logo {
+    font-size: 1.8rem;
+    margin-top: 0.5rem;
+  }
+
+  .sign-btn {
+    height: 1.8rem;
+    width: 4.3rem;
+    margin-top: 0.5rem;
+  }
+
+  .dv-1 {
+    margin-top: 5rem;
+    height: 95%;
+    width: 100%;
+  }
+
+  .txt-1 {
+    font-size: 1.75rem;
+    line-height: 2rem;
+  }
+
+  .txt-2 {
+    font-size: 1.125rem;
+  }
+
+  .txt-3 {
+    width: 85%;
+    text-align: left;
+    font-size: 1.2rem;
+    margin-left: 1.3rem;
+  }
+
+  .start {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .input-1 {
+    height: 3.2rem;
+    width: 95%;
+  }
+
+  .btn-1 {
+    height: 3rem;
+    margin-top: 1rem;
+  }
+
+  .btn-1 > span {
+    font-size: 1rem;
+  }
+}

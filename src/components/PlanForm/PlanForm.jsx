@@ -22,10 +22,10 @@ const PlanForm = () => {
           </div>
           <div className="h-[70vh] w-[45%] flex flex-col justify-around items-end">
             <div className="h-[13vh] w-[40%] flex justify-around">
-              <div className="h-full w-[38.5%] flex justify-center items-center bg-[#e50914] opacity-[.6] rounded-[2px]">
+              <div className="h-full w-[38.5%] flex justify-center items-center bg-[#e50914] opacity-[.6] rounded-[2px] cursor-pointer">
                 <h2 className="text-[#fff]">Standard</h2>
               </div>
-              <div className="h-full w-[38.5%] flex justify-center items-center bg-[#e50914] rounded-[2px]">
+              <div className="h-full w-[38.5%] flex justify-center items-center bg-[#e50914] rounded-[2px] cursor-pointer">
                 <h2 className="text-[#fff]">Premium</h2>
               </div>
             </div>

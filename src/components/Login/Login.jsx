@@ -17,7 +17,7 @@ const Login = () => {
             <div className="min-h-[50%] w-full flex flex-col items-center justify-around">
               <input
                 className="h-[3.2rem] w-[70%] placeholder:text-[#8c8c8c] rounded-[4px] indent-5 outline-none bg-[#333]"
-                placeholder="Email or phone number"
+                placeholder="Email"
               />
               <h3 className="text-[orange] mr-[52%] mb-[0.6rem] hidden">
                 Enter a valid Email

@@ -4,20 +4,20 @@ import Start from "../Start/Start";
 const Hero = () => {
   return (
     <div className="h-[77vh] flex flex-col items-center border-b-[8px] border-b-[#222] div-1">
-      <div className="h-[12.35%] w-[94.2%] flex items-center justify-between">
-        <h1 className="text-4xl text-[#e50914] font-bold">BANJOFLIX</h1>
-        <button className="h-[2.3rem] w-[5.3rem] text-[#fff] border-[#e50914] bg-[#e50914] rounded-[3px] cursor-pointer">
+      <div className="h-[12.35%] w-[94.2%] flex items-center justify-between lg-holder">
+        <h1 className="text-4xl text-[#e50914] font-bold logo">BANJOFLIX</h1>
+        <button className="h-[2.3rem] w-[5.3rem] text-[#fff] border-[#e50914] bg-[#e50914] rounded-[3px] cursor-pointer sign-btn">
           Sign In
         </button>
       </div>
-      <div className="h-[48.5%] w-[40%] flex flex-col justify-around text-[#fff] mt-[9rem]">
-        <h1 className="text-[4rem] text-center font-medium  leading-[4.2rem]">
+      <div className="h-[48.5%] w-[40%] flex flex-col justify-around text-[#fff] mt-[9rem] dv-1">
+        <h1 className="text-[4rem] text-center font-medium  leading-[4.2rem] txt-1">
           Unlimited movies, TV shows, and more.
         </h1>
-        <h2 className="text-[1.625rem] text-center">
+        <h2 className="text-[1.625rem] text-center txt-2">
           Watch anywhere. Cancel anytime.
         </h2>
-        <h3 className="text-[1.2rem] text-center">
+        <h3 className="text-[1.2rem] text-center txt-3">
           Ready to watch? Enter your email to create or restart your membership.
         </h3>
         <Start />

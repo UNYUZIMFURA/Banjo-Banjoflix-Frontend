@@ -1,13 +1,14 @@
 import Question from "./Question";
 import Question2 from "./Question2";
+import './Faq.css'
 
 const Faq = () => {
   return (
-    <div className="min-h-[98vh] w-full flex flex-col items-center justify-evenly border-b-[8px] border-b-[#222] bg-[#000]">
+    <div className="min-h-[98vh] w-full flex flex-col items-center justify-evenly border-b-[8px] border-b-[#222] bg-[#000] quest-holder">
       <h1 className="text-[#fff] text-[3.125rem] text-center font-medium leading-[4rem] mb-[1.5rem]">
         Frequently Asked Questions
       </h1>
-      <div className="min-h-[53.5vh] w-[44.5%] flex flex-col">
+      <div className="min-h-[53.5vh] w-[44.5%] flex flex-col sub-quest-holder">
         <Question2
           id="1"
           question="What is Banjoflix?"
@@ -47,11 +48,11 @@ const Faq = () => {
           answer2="Kids profiles come with PIN-protected parental controls that let you restrict the maturity rating of content kids can watch and block specific titles you don’t want kids to see."
         />
       </div>
-      <div className="h-[16vh] w-[44.5%] flex flex-col justify-around">
-        <h3 className="text-[1.2rem] text-center text-[#fff] mt-[1rem]">
+      <div className="h-[16vh] w-[44.5%] flex flex-col justify-around form-2">
+        <h3 className="text-[1.2rem] text-center text-[#fff] mt-[1rem] email-descr">
           Ready to watch? Enter your email to create or restart your membership.
         </h3>
-        <form className="h-[75%] w-full flex items-center justify-center text-[#fff]">
+        <form className="h-[75%] w-full flex items-center justify-center text-[#fff] real-form">
           <input
             className="h-[62%] w-[66%] text-[#000] placeholder:text-[#8c8c8c] border-[1px] border-[#8c8c8c] indent-2 outline-none"
             placeholder="Email address"
