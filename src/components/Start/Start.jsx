@@ -11,6 +11,7 @@ const Start = () => {
       <button className="h-[4.3rem] w-[33%] flex justify-center items-center bg-[#f40612] btn-1">
         <span className="text-[1.85rem]">Get Started</span>
         <HiOutlineChevronRight
+          className='icon-2'
           size={28}
           style={{
             marginTop: "2px",

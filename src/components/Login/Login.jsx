@@ -3,12 +3,12 @@ import "./Login.css";
 const Login = () => {
   return (
     <div className="h-[115vh] flex flex-col items-center justify-around text-[#fff] wrapper">
-      <div className="h-[4vh] w-full flex items-center">
+      <div className="h-[4vh] w-full flex items-center main-holder">
         <h1 className="text-4xl text-[#e50914] font-bold ml-[4rem]">
           BANJOFLIX
         </h1>
       </div>
-      <div className="h-[70vh] w-[24.5%] flex flex-col items-center justify-evenly bg-[rgba(0,0,0,.75)] mb-[7rem]">
+      <div className="h-[70vh] w-[24.5%] flex flex-col items-center justify-evenly bg-[rgba(0,0,0,.75)] mb-[7rem] sign-form">
         <div className=" h-[50%] w-full flex flex-col justify-between">
           <h2 className="text-[#fff] text-[2rem] font-bold ml-[4.5rem]">
             Sign In
@@ -58,7 +58,7 @@ const Login = () => {
           </div>
         </div>
       </div>
-      <div className="h-[20vh] w-full flex flex-col items-center justify-around text-[#737373] bg-[rgba(0,0,0,.75)]">
+      <div className="h-[20vh] w-full flex flex-col items-center justify-around text-[#737373] bg-[rgba(0,0,0,.75)] footer-3">
         <h3 className="mr-[45%]">Questions? Contact Us.</h3>
         <div className="h-[30%] w-[50%] flex justify-around mr-[10.5%]">
           <div className="flex flex-col justify-around">
@@ -69,8 +69,8 @@ const Login = () => {
             <h3 className="text-[0.95rem]">Help Center</h3>
             <h3 className="text-[0.95rem]">Corporate Information</h3>
           </div>
-          <h3 className="text-[0.95rem] mt-[0.2rem]">Terms of Use</h3>
-          <h3 className="text-[0.95rem] mt-[0.2rem]">Privacy</h3>
+          <h3 className="text-[0.95rem] mt-[0.2rem] terms">Terms of Use</h3>
+          <h3 className="text-[0.95rem] mt-[0.2rem] privacy">Privacy</h3>
         </div>
       </div>
     </div>

@@ -6,3 +6,68 @@
     ),
     url("../../images/alternative.jpg");
 }
+
+@media only screen and (max-width: 1710px) {
+  .sign-form {
+    height: 90vh;
+  }
+}
+
+@media only screen and (max-width: 1600px) {
+  .wrapper {
+    background-color: red;
+  }
+
+  .sign-form {
+    width: 30%;
+  }
+}
+
+@media only screen and (max-width: 1310px) {
+  .sign-form {
+    width: 35%;
+  }
+}
+
+@media only screen and (max-width: 1120px) {
+  .sign-form {
+    width: 45%;
+  }
+}
+
+@media only screen and (max-width: 874px) {
+  .sign-form {
+    width: 55%;
+  }
+}
+
+@media only screen and (max-width: 716px) {
+  .sign-form {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .wrapper {
+    height: 130vh;
+  }
+
+  .sign-form {
+    height: 100vh;
+    width: 88%;
+    margin-top: 3rem;
+  }
+
+  .wrapper {
+    justify-content: space-between;
+  }
+
+  .terms .privacy {
+    display: none;
+  }
+
+  .footer-3 div {
+    width: 100%;
+    margin: 0;
+  }
+}

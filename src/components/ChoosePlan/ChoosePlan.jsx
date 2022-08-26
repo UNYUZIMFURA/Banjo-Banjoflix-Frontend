@@ -2,15 +2,16 @@ import Footer2 from "../CodeReduction/Footer2";
 import Header from "../CodeReduction/Header";
 import PlanDetails from "./PlanDetails";
 import CheckMark from "../../images/checkmark.png";
+import './ChoosePlan.css'
 
 const ChoosePlan = () => {
   return (
     <div className="h-screen flex flex-col justify-between">
       <div className="h-[70vh] w-full flex flex-col items-center justify-between">
         <Header height="7vh" />
-        <div className="h-[50vh] w-[20%] flex flex-col items-center justify-center">
+        <div className="h-[50vh] w-[20%] flex flex-col items-center justify-center main-holder">
           <div className="h-[40%] w-full flex flex-col justify-around">
-            <div className="h-[30%] w-[30%] flex  items-center justify-center mx-auto">
+            <div className="h-[30%] w-[30%] flex  items-center justify-center mx-auto img-holder">
               <img
                 src={CheckMark}
                 alt=""

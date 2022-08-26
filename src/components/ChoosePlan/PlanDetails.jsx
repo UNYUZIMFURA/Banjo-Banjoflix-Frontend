@@ -1,3 +1,4 @@
+import './ChoosePlan.css'
 import { TiTick } from "react-icons/ti";
 
 const PlanDetails = (props) => {

@@ -1,3 +1,4 @@
+import './SignReg.css'
 import Header from "../CodeReduction/Header";
 import Footer2 from "../CodeReduction/Footer2";
 import Devices from "../../images/devices.png";
@@ -7,8 +8,8 @@ const SignReg = () => {
     <div className=" h-screen flex flex-col justify-between">
       <div className="h-[60vh] flex flex-col justify-between items-center">
         <Header />
-        <div className="h-[40vh] w-[20%] flex flex-col items-center justify-around">
-          <div className="w-4/5 h-[25%] ">
+        <div className="h-[40vh] w-[20%] flex flex-col items-center justify-around main-holder">
+          <div className="w-4/5 h-[25%] img-holder">
             <img src={Devices} alt="" className="object-cover" />
           </div>
           <div className="h-[48%] w-full flex flex-col items-center justify-between">

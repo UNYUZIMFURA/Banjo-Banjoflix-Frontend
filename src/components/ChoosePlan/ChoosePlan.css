@@ -1,0 +1,27 @@
+@media only screen and (max-width: 600px) {
+    .main-holder {
+        width: 100%;
+    }
+
+    .main-holder > button {
+        width: 50%;
+    }
+    
+    .main-holder img {
+        width: 30%;
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+    .main-holder {
+        width: 70%;
+    }
+
+    .main-holder > button {
+        width: 40%;
+    }
+
+    .main-holder img {
+        width: 30%
+    }
+}

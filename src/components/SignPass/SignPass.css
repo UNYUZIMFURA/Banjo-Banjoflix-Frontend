@@ -1,21 +1,40 @@
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 1510px) {
+  .signup-holder {
+    width: 30%;
+    margin: 0 auto;
+  }
+}
 
-    .main-signup {
-        height: 80vh;
-        width: 100%;
-        margin: 0 auto;
-    }
+@media only screen and (max-width: 1183px) {
+  .signup-holder {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 887px) {
     .signup-holder {
-        margin-left: 3rem;
-        width: 100%;
+        width: 60%
     }
+}
 
-    .footer-2 div {
-        height: 15vh;
-        width: 100%;
-    }
+@media only screen and (max-width: 600px) {
+  .main-signup {
+    height: 80vh;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .signup-holder {
+    margin-left: 3rem;
+    width: 100%;
+  }
 
-    .terms, .privacy {
-        display: none;
-    }
+  .footer-2 div {
+    height: 15vh;
+    width: 100%;
+  }
+
+  .terms,
+  .privacy {
+    display: none;
+  }
 }

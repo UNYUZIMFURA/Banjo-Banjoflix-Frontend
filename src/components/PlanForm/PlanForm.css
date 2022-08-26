@@ -1,0 +1,22 @@
+@media only screen and (max-width: 600px) {
+    .descr-holder {
+        display: none;
+    }
+
+    .plans-holder {
+        width: 70%;
+        height: 15vh;
+    }
+
+    .txt-holder {
+        width: 90%;
+    }
+
+    .next-btn {
+        margin-top: 2rem
+    }
+
+    .plan {
+        display: none;
+    }
+}

@@ -1,0 +1,10 @@
+@media only screen and (max-width: 600px) {
+    .main-holder {
+        width: 100%;
+    }
+
+    .img-holder {
+        width: 50%;
+    }
+}
+

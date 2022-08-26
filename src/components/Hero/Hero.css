@@ -62,10 +62,15 @@
 
   .btn-1 {
     height: 3rem;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
   }
 
   .btn-1 > span {
     font-size: 1rem;
+  }
+
+  .icon-2 {
+    border-radius: 3px;
+    height: 20px;
   }
 }

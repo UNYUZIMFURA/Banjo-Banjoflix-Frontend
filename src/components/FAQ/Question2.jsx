@@ -48,7 +48,7 @@ const Question2 = (props) => {
 
       {activeQuest === props.id && visibility ? (
         <div className="flex flex-col items-center bg-[#303030] mt-[1px] mb-[0.5rem]">
-          <h1 className="w-[90%] text-[#fff] text-[1.625rem]">
+          <h1 className="w-[90%] text-[#fff] text-[1.625rem] answer">
             <br />
             {props.answer1}
             <br />
