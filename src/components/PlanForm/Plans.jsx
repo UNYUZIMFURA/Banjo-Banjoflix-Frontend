@@ -6,7 +6,7 @@ const Plans = (props) => {
       </div>
       <div className="h-full w-[40%] flex items-center justify-around bg-[white]">
         <h2 className="text-[#737373] font-[500]">{props.descr2}</h2>
-        <h2 className="text-[#737373 text-[#e50914] font-[500]">
+        <h2 className="text-[#737373] font-[500]">
           {props.descr3}
         </h2>
       </div>

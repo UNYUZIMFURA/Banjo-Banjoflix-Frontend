@@ -1,4 +1,4 @@
-import './PlanForm.css'
+import "./PlanForm.css";
 
 const CodeReduction2 = () => {
   return (
@@ -13,7 +13,7 @@ const CodeReduction2 = () => {
 
 const CodeReduction3 = () => {
   return (
-    <div className="h-[25vh] w-[45%] flex flex-col items-center justify-around text-[#737373] txt-holder">
+    <div className="h-[25vh] w-[45%] flex flex-col items-center justify-around text-[#737373] txt-holder-qual">
       <div>
         <h2 className="text-[0.9rem]">
           HD[720p], Full HD[1080p], Ultra HD[4K] and HDR availability subject to
@@ -27,7 +27,7 @@ const CodeReduction3 = () => {
           with basic and Mode
         </h2>
       </div>
-      <button className="h-[4rem] w-[50%] text-[#fff] text-[1.2rem] rounded-[4px] bg-[#e50914] next-btn">
+      <button className="h-[4rem] w-[35%] text-[#fff] text-[1.2rem] rounded-[4px] outline-none bg-[#e50914] next-btn-2">
         Next
       </button>
     </div>

@@ -17,6 +17,19 @@
     }
 }
 
+@media only screen and (max-width: 1160px) {
+    .txt-holder-qual {
+        height: 35vh;
+        width: 50%;
+    }
+
+    .next-btn-2 {
+        margin-top: 2rem;
+        width: 60%;
+        height: 4rem;
+    }
+}
+
 @media only screen and (max-width: 960px) {
     .plans-holder {
         width: 50%;
@@ -38,11 +51,14 @@
         height: 15vh;
     }
 
-    .txt-holder {
+    .txt-holder-qual {
+        height: 35vh;
         width: 90%;
     }
 
-    .next-btn {
-        margin-top: 2rem
+    .next-btn-2 {
+        margin-top: 2rem;
+        width: 90%;
+        height: 4rem;
     }
 }

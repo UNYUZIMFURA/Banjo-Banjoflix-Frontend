@@ -1,14 +1,19 @@
-@media only screen and (max-width: 1830px) {
-  
+@media only screen and (max-width: 1400px) {
+ .form-2 {
+  width: 50%
+ }
+ 
+ .sub-quest-holder {
+  width: 60%
+ }
 }
-
 @media only screen and (max-width: 1300px){
   .quest-holder > h1 {
     font-size: 1.625rem;
   }
 
   .sub-quest-holder {
-    width: 100%;
+    width: 70%;
   }
 
   .main-quest > h2 {
@@ -34,13 +39,13 @@
   }
 
   .real-form > input {
-    height: 2.5rem;
-    width: 80%;
+    height: 3.2rem;
+    width: 45%;
   }
 
   .real-form > button {
-    height: 2.5rem;
-    width: 40%;
+    height: 3rem;
+    width: 30%;
   }
 
   .real-form span {
@@ -84,13 +89,13 @@
   }
 
   .real-form > input {
-    height: 2.5rem;
-    width: 80%;
+    height: 3.2rem;
+    width: 50%;
   }
 
   .real-form > button {
-    height: 2.5rem;
-    width: 40%;
+    height: 3rem;
+    width: 30%;
   }
 
   .real-form span {

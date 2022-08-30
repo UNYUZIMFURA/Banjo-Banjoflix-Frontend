@@ -1,8 +1,18 @@
-import './SignPass.css'
+import { useEffect, useState } from "react";
+import "./SignPass.css";
 import Footer2 from "../CodeReduction/Footer2";
 import Header from "../CodeReduction/Header";
 
 const SignPass = () => {
+  const [password, setPassword] = useState("");
+  function handleChange(e) {
+    setPassword(e.target.value);
+  }
+  // useEffect(() => {
+  //   fetch()
+  //     .then((res) => res.json())
+  //     .then((data) => console.log(data));
+  // });
   return (
     <div className="h-screen flex flex-col justify-between">
       <div className="h-[70%] w-full flex flex-col justify-around items-center main-signup">
@@ -35,6 +45,7 @@ const SignPass = () => {
                 type="password"
                 className="w-[90%] h-[3.5rem] border-[1px] border-[#737373] indent-3 outline-none"
                 placeholder="Enter your password"
+                value={password}
               ></input>
 
               <h3 className="text-[#0071eb]">Forgot your password?</h3>

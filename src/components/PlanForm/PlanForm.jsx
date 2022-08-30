@@ -1,4 +1,5 @@
-import './PlanForm.css'
+import { useState } from "react";
+import "./PlanForm.css";
 import PlanDetails from "../ChoosePlan/PlanDetails";
 import Footer2 from "../CodeReduction/Footer2";
 import Header from "../CodeReduction/Header";
@@ -6,6 +7,9 @@ import { CodeReduction2, CodeReduction3 } from "./CodeReduction2";
 import Plans from "./Plans";
 
 const PlanForm = () => {
+  function handleSubmit() {
+
+  }
   return (
     <div className="h-[155vh] flex flex-col items-center justify-between">
       <div className="h-[120vh] w-full flex flex-col justify-between">
@@ -17,16 +21,22 @@ const PlanForm = () => {
               <span className="text-[#737373] font-medium"> 3</span>
             </h3>
             <h2 className="text-[2rem] font-medium">
-              Choose the plan that's right for you
+              Scroll and Click to Next Button
             </h2>
-            <PlanDetails height="10vh" width="50%" className="plan"/>
+            <PlanDetails height="10vh" width="50%" className="plan" />
           </div>
           <div className="h-[70vh] w-[45%] flex flex-col justify-around items-end all-plans-holder">
             <div className="h-[13vh] w-[40%] flex justify-around plans-holder">
-              <div className="h-full w-[38.5%] flex justify-center items-center bg-[#e50914] opacity-[.6] rounded-[2px] cursor-pointer">
+              <div
+                className="h-full w-[38.5%] flex justify-center items-center bg-[#e50914] rounded-[2px] cursor-pointer"
+                onClick={handleSubmit}
+              >
                 <h2 className="text-[#fff]">Standard</h2>
               </div>
-              <div className="h-full w-[38.5%] flex justify-center items-center bg-[#e50914] rounded-[2px] cursor-pointer">
+              <div
+                className="h-full w-[38.5%] flex justify-center items-center bg-[#e50914] rounded-[2px] cursor-pointer"
+                onClick={handleSubmit}
+              >
                 <h2 className="text-[#fff]">Premium</h2>
               </div>
             </div>

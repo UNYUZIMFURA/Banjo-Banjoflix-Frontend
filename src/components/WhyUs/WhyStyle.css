@@ -45,6 +45,10 @@
   }
 }
 
+@media only screen and (max-width: 1160px) {
+  
+}
+
 @media only screen and (max-width: 950px) {
   .holder-1,
   .holder-3 {
@@ -136,6 +140,11 @@
   }
 }
 
+@media only screen and (max-width: 900px) {
+  .vid-holder {
+    width: 80%
+  }
+}
 @media only screen and (max-width: 600px) {
   .holder-1,
   .holder-3 {
@@ -215,21 +224,12 @@
   }
 
   .box {
-    top: 10rem;
-    height: 4rem;
-    width: 65%;
-  }
-}
-
-@media only screen and (min-width: 520px) {
-  /* .vid-holder {
-    width: 75vw;
-    height: 24vh;
-    top: 3.2rem;
-    left: 3rem;
+    top: 68%;
+    height: 4.5rem;
+    width: 58%;
   }
 
-  .holder-2 {
-    margin-top: 3rem;
-  } */
+  .stranger-holder {
+    width: 100%;
+  }
 }

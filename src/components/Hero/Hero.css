@@ -137,6 +137,8 @@
   }
 
   .start {
+    width: 100%;
+    margin: 0;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -149,6 +151,7 @@
 
   .btn-1 {
     height: 3rem;
+    width: 50%;
     margin-top: 0.5rem;
   }
 

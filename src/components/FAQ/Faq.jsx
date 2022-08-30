@@ -1,8 +1,21 @@
 import Question from "./Question";
 import Question2 from "./Question2";
-import './Faq.css'
+import "./Faq.css";
+import { useState, useEffect } from "react";
 
 const Faq = () => {
+  const [email2, setEmail2] = useState("");
+  function handleChange(e) {
+    setEmail2(e.target.value);
+  }
+
+  // useEffect((e){
+  //   e.preventDefault();
+  //   fetch("")
+  //     .then((res) => res.json())
+  //     .then((data) => console.log(data));
+  // });
+
   return (
     <div className="min-h-[98vh] w-full flex flex-col items-center justify-evenly border-b-[8px] border-b-[#222] bg-[#000] quest-holder">
       <h1 className="text-[#fff] text-[3.125rem] text-center font-medium leading-[4rem] mb-[1.5rem]">
@@ -54,8 +67,10 @@ const Faq = () => {
         </h3>
         <form className="h-[75%] w-full flex items-center justify-center text-[#fff] real-form">
           <input
+            onChange={handleChange}
             className="h-[62%] w-[66%] text-[#000] placeholder:text-[#8c8c8c] border-[1px] border-[#8c8c8c] indent-2 outline-none"
             placeholder="Email address"
+            value={email2}
           ></input>
           <button className="h-[62%] w-[25%] bg-[#f40612]">
             <span className="text-[1.8rem]">Get Started</span>
