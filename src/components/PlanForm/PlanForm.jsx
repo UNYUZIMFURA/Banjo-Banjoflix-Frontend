@@ -1,3 +1,4 @@
+import './PlanForm.css'
 import PlanDetails from "../ChoosePlan/PlanDetails";
 import Footer2 from "../CodeReduction/Footer2";
 import Header from "../CodeReduction/Header";
@@ -9,7 +10,7 @@ const PlanForm = () => {
     <div className="h-[155vh] flex flex-col items-center justify-between">
       <div className="h-[120vh] w-full flex flex-col justify-between">
         <Header />
-        <div className="h-[108vh] w-full flex flex-col justify-between items-center">
+        <div className="h-[108vh] w-full flex flex-col justify-between items-center big-holder">
           <div className="h-[18vh] w-[45%] flex flex-col justify-between descr-holder">
             <h3 className="text-[0.9rem]">
               STEP <span className="text-[#737373] font-medium">1</span> OF
@@ -20,7 +21,7 @@ const PlanForm = () => {
             </h2>
             <PlanDetails height="10vh" width="50%" className="plan"/>
           </div>
-          <div className="h-[70vh] w-[45%] flex flex-col justify-around items-end main-holder">
+          <div className="h-[70vh] w-[45%] flex flex-col justify-around items-end all-plans-holder">
             <div className="h-[13vh] w-[40%] flex justify-around plans-holder">
               <div className="h-full w-[38.5%] flex justify-center items-center bg-[#e50914] opacity-[.6] rounded-[2px] cursor-pointer">
                 <h2 className="text-[#fff]">Standard</h2>

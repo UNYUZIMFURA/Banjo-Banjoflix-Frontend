@@ -3,7 +3,7 @@ import "./Login.css";
 const Login = () => {
   return (
     <div className="h-[115vh] flex flex-col items-center justify-around text-[#fff] wrapper">
-      <div className="h-[4vh] w-full flex items-center main-holder">
+      <div className="h-[4vh] w-full flex items-center header">
         <h1 className="text-4xl text-[#e50914] font-bold ml-[4rem]">
           BANJOFLIX
         </h1>

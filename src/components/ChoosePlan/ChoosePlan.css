@@ -1,27 +1,27 @@
-@media only screen and (max-width: 600px) {
-    .main-holder {
-        width: 100%;
-    }
+@media only screen and (max-width: 1500px) {
+  .choose-holder {
+    width: 50%;
+  }
 
-    .main-holder > button {
-        width: 50%;
-    }
-    
-    .main-holder img {
-        width: 30%;
-    }
+  .choose-holder > button {
+    width: 40%;
+  }
+
+  .choose-holder img {
+    width: 30%;
+  }
 }
 
-@media only screen and (max-width: 1250px) {
-    .main-holder {
-        width: 70%;
-    }
+@media only screen and (max-width: 600px) {
+  .choose-holder {
+    width: 100%;
+  }
 
-    .main-holder > button {
-        width: 40%;
-    }
+  .choose-holder > button {
+    width: 55%;
+  }
 
-    .main-holder img {
-        width: 30%
-    }
+  .choose-holder img {
+    width: 45%;
+  }
 }

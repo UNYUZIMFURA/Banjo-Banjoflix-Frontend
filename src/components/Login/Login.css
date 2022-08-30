@@ -9,41 +9,43 @@
 
 @media only screen and (max-width: 1710px) {
   .sign-form {
-    height: 90vh;
+    height: 90%;
+    width: 30%;
   }
 }
 
 @media only screen and (max-width: 1600px) {
-  .wrapper {
-    background-color: red;
-  }
-
   .sign-form {
-    width: 30%;
+    height: 90%;
+    width: 35%;
   }
 }
 
 @media only screen and (max-width: 1310px) {
   .sign-form {
-    width: 35%;
+    height: 90%;
+    width: 45%;
   }
 }
 
 @media only screen and (max-width: 1120px) {
   .sign-form {
+    height: 72%;
     width: 45%;
   }
 }
 
 @media only screen and (max-width: 874px) {
   .sign-form {
-    width: 55%;
+    height: 70%;
+    width: 58%;
   }
 }
 
 @media only screen and (max-width: 716px) {
   .sign-form {
-    width: 70%;
+    height: 70%;
+    width: 65%;
   }
 }
 
@@ -53,9 +55,8 @@
   }
 
   .sign-form {
-    height: 100vh;
-    width: 88%;
-    margin-top: 3rem;
+    height: 75%;
+    width: 80%;
   }
 
   .wrapper {
@@ -69,5 +70,12 @@
   .footer-3 div {
     width: 100%;
     margin: 0;
+  }
+
+  @media only screen and (max-width: 500px) {
+    .sign-form {
+      height: 75vh;
+      width: 95%;
+    }
   }
 }

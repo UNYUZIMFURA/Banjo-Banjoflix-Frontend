@@ -10,6 +10,93 @@
   background-size: 100%;
 }
 
+@media only screen and (max-width: 1551px) {
+.dv-1 {
+  height: 50%;
+  width: 45%
+}
+}
+
+@media only screen and (max-width: 1379px) {
+  .dv-1 {
+    height: 50%;
+    width: 55%
+  }
+}
+
+@media only screen and (max-width: 1128px) {
+  .dv-1 {
+    height: 50%;
+    width: 65%
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .div-1 {
+    height: 60vh;
+    justify-content: center;
+  }
+
+  .logo {
+    font-size: 1.8rem;
+    margin-top: 0.5rem;
+  }
+
+  .sign-btn {
+    height: 1.8rem;
+    width: 4.3rem;
+    margin-top: 0.5rem;
+  }
+
+  .dv-1 {
+    margin-top: 5rem;
+    height: 95%;
+    width: 100%;
+  }
+
+  .txt-11 {
+    font-size: 1.75rem;
+  }
+
+  .txt-22 {
+    font-size: 1.125rem;
+  }
+
+  .txt-33 {
+    width: 85%;
+    text-align: left;
+    font-size: 1.2rem;
+    margin-left: 1.3rem;
+  }
+
+  .start {
+    width: 60%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 20%;
+  }
+
+  .input-1 {
+    height: 3.2rem;
+    width: 95%;
+  }
+
+  .btn-1 {
+    height: 3rem;
+    margin-top: 0.5rem;
+  }
+
+  .btn-1 > span {
+    font-size: 1rem;
+  }
+
+  .icon-2 {
+    border-radius: 3px;
+    height: 20px;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .div-1 {
     height: 60vh;
@@ -33,16 +120,16 @@
     width: 100%;
   }
 
-  .txt-1 {
+  .txt-11 {
     font-size: 1.75rem;
     line-height: 2rem;
   }
 
-  .txt-2 {
+  .txt-22 {
     font-size: 1.125rem;
   }
 
-  .txt-3 {
+  .txt-33 {
     width: 85%;
     text-align: left;
     font-size: 1.2rem;

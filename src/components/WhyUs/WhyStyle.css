@@ -2,6 +2,140 @@
   box-shadow: 0 0 2em 0 #000;
 }
 
+@media only screen and (max-width: 1900px) {
+  .holder-5 {
+    width: 50%;
+  }
+
+  .vid-holder {
+    top: 4.7rem;
+    width: 20.5vw
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .holder-2 {
+    width: 45%;
+  }
+
+  .stranger-img {
+    width: 90%;
+  }
+
+  .box {
+    height: 5.5rem;
+    top: 65%;
+  }
+
+  .holder-4 {
+    width: 45%
+  }
+
+  .holder-5 {
+    width: 50%
+  }
+
+  .vid-holder {
+    top: 18%;
+    width: 30vw;
+  }
+
+  .final-div {
+    width: 55%
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .holder-1,
+  .holder-3 {
+    flex-direction: column;
+  }
+
+  .holder-2 {
+    margin-top: 4rem;
+  }
+
+  .holder-2,
+  .holder-4 {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .holder-2 > h1,
+  .holder-4 > h1 {
+    text-align: center;
+    font-size: 1.625rem;
+  }
+
+  .holder-4 > h1 {
+    line-height: 1.9rem;
+  }
+
+  .holder-2 > h2,
+  .holder-4 > h2 {
+    text-align: center;
+    font-size: 1.125rem;
+  }
+
+  .holder-5 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0;
+  }
+
+  .holder-5 > h1 {
+    font-size: 1.625rem;
+  }
+
+  .holder-5 > h2 {
+    text-align: center;
+    font-size: 1.125rem;
+  }
+
+  .holder-6 {
+    flex-direction: column-reverse;
+  }
+
+  .holder-6 img {
+    width: 70%
+  }
+
+  .final-div {
+    width: 80%;
+    text-align: center;
+  }
+
+  .holder-6 h1 {
+    font-size: 1.625rem;
+  }
+
+  .holder-6 h2 {
+    font-size: 1.125rem;
+  }
+
+  .vid-holder {
+    width: 38vw;
+    height: 24vh;
+    top: 3.2rem;
+    left: 3rem;
+  }
+
+  .stranger-holder {
+    width: 60%;
+    margin-top: 2rem;
+  }
+
+  .box {
+    top: 12rem;
+    height: 4.5rem;
+    width: 50%;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .holder-1,
   .holder-3 {

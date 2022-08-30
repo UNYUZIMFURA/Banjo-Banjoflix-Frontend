@@ -12,11 +12,11 @@ const SignReg = () => {
           <div className="w-4/5 h-[25%] img-holder">
             <img src={Devices} alt="" className="object-cover" />
           </div>
-          <div className="h-[48%] w-full flex flex-col items-center justify-between">
-            <h2 className="w-[92%] text-[2rem] text-[#333] font-medium leading-[2.8rem] text-center">
+          <div className="h-[48%] w-full flex flex-col items-center justify-between txt-holder">
+            <h2 className="w-[92%] text-[2rem] text-[#333] font-medium leading-[2.8rem] text-center txt-1">
               Finish setting up your account
             </h2>
-            <h2 className="w-4/5 text-center text-[#333] text-[1.2rem] leading-[1.8rem]">
+            <h2 className="w-4/5 text-center text-[#333] text-[1.2rem] leading-[1.8rem] txt-2">
               Banjoflix is personalized for you. Create a password to watch on
               any device at any time.
             </h2>
