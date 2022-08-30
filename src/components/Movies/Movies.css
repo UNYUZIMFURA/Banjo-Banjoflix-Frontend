@@ -6,6 +6,7 @@
     background-image: url('../../images/kids.png');
     background-size: 100%;
     background-repeat: no-repeat;
+    background-color: brown
 }
 
 @media only screen and (max-width: 1440px) {
@@ -24,6 +25,12 @@
     }
 }
 
+@media only screen and (max-width: 962px) {
+    .rows-holder {
+        top: 70%
+    }
+}
+
 @media only screen and (max-width: 910px) {
     .genres-holder {
         width: 100%
@@ -33,11 +40,27 @@
     }
 }
 
+@media only screen and (max-width: 780px) {
+    .rows-holder {
+        top: 60%
+    }
+}
+
 @media only screen and (max-width: 670px) {
     .genres-holder {
         width: 100%;
         display: flex;
         flex-direction: column;
+    }
+
+    .rows-holder {
+        top: 50%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .rows-holder {
+        top: 45%
     }
 }
 
@@ -45,4 +68,10 @@
    .nav {
     display: none;
    }
+}
+
+@media only screen and (max-width: 502px) {
+    .rows-holder {
+        top: 30%
+    }
 }

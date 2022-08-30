@@ -5,12 +5,12 @@ import NavBar from "./NavBar";
 
 const Movies = () => {
   return (
-    <div className="flex flex-col justify-around">
+    <div className="flex flex-col justify-around relative">
       <div className="h-screen trending-holder">
       <NavBar />
-      <div className="h-[90vh] w-[50%] top-[10%] z-20 left-[25%] fixed bg-[yellow]"></div>
+      <div className="hidden h-[90vh] w-[50%] top-[10%] z-20 left-[25%] fixed bg-[yellow]"></div>
       </div>
-      <div className="flex flex-col">
+      <div className="absolute top-[87%] flex flex-col rows-holder">
       <Row
         title="Trending Now"
         fetchUrl={requests.fetchTrending}

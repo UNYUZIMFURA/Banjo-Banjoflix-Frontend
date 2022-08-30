@@ -6,7 +6,16 @@ import {FiPlay} from "react-icons/fi"
 
 const base_url = "https://image.tmdb.org/t/p/original/";
 const Row = (props) => {
-  const [movies, setMovies] = useState([{"name": "kevin"}, {"name":"james"}]);
+  const [movies, setMovies] = useState([
+    {"name": "kevin"}, 
+    {"name":"james"},
+    {"name": "kevin"}, 
+    {"name":"james"},
+    {"name": "kevin"}, 
+    {"name":"james"},
+    {"name": "kevin"}, 
+    {"name":"james"},
+  ]);
   useEffect(() => {
     async function fetchData() {
       const request = await instance.get(props.fetchUrl);
@@ -16,9 +25,9 @@ const Row = (props) => {
     fetchData();
   }, [props.fetchUrl]);
   return (
-    <div className="h-[22.5vh] flex flex-col justify-around mt-[1rem] bg-[red] overflow-y-scroll">
+    <div className="h-[22.5vh] fw-full lex flex-col justify-around mt-[1rem] bg-[red] overflow-y-scroll">
       <h2 className="text-[1.3rem] text-[#fff]">{props.title}</h2>
-      <div className="h-[75%] flex bg-[green]">
+      <div className="h-[75%] w-full flex bg-[green]">
         {movies.map((movie) => {
           return (
             <div className="h-full w-[17rem] relative single-movie ml-[1rem]">
