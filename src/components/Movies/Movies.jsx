@@ -10,7 +10,7 @@ const Movies = () => {
       <NavBar />
       <div className="hidden h-[90vh] w-[50%] top-[10%] z-20 left-[25%] fixed bg-[yellow]"></div>
       </div>
-      <div className="absolute top-[87%] flex flex-col rows-holder">
+      <div className="w-full absolute top-[87%] flex flex-col rows-holder">
       <Row
         title="Trending Now"
         fetchUrl={requests.fetchTrending}

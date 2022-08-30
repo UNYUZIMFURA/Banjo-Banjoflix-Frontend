@@ -15,6 +15,8 @@ const Row = (props) => {
     {"name":"james"},
     {"name": "kevin"}, 
     {"name":"james"},
+    {"name": "kevin"}, 
+    {"name":"james"},
   ]);
   useEffect(() => {
     async function fetchData() {
@@ -25,9 +27,9 @@ const Row = (props) => {
     fetchData();
   }, [props.fetchUrl]);
   return (
-    <div className="h-[22.5vh] fw-full lex flex-col justify-around mt-[1rem] bg-[red] overflow-y-scroll">
+    <div className="h-[22.5vh] w-full lex flex-col justify-around mt-[1rem] bg-[red]">
       <h2 className="text-[1.3rem] text-[#fff]">{props.title}</h2>
-      <div className="h-[75%] w-full flex bg-[green]">
+      <div className="h-[75%] w-full flex bg-[green] overflow-x-scroll">
         {movies.map((movie) => {
           return (
             <div className="h-full w-[17rem] relative single-movie ml-[1rem]">
