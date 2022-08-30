@@ -16,14 +16,14 @@ const Row = (props) => {
     fetchData();
   }, [props.fetchUrl]);
   return (
-    <div className="h-[27vh] flex flex-col justify-around bg-[red] overflow-y-scroll">
+    <div className="h-[22.5vh] flex flex-col justify-around mt-[1rem] bg-[red] overflow-y-scroll">
       <h2 className="text-[1.3rem] text-[#fff]">{props.title}</h2>
-      <div className="h-[90%] flex bg-[green]">
+      <div className="h-[75%] flex bg-[green]">
         {movies.map((movie) => {
           return (
-            <div className="h-full w-[20rem] relative single-movie ml-[1rem]">
-              <img src={TestImg} alt={movie} className="h-full w-full object-cover movie-img"/>
-              <FiPlay style={{ color: "white" }} size={30} className="absolute top-[45%] left-1/2 cursor-pointer play-btn"/>
+            <div className="h-full w-[17rem] relative single-movie ml-[1rem]">
+              <img src={TestImg} alt={movie} className="h-full w-full rounded-[3px] object-cover movie-img"/>
+              <FiPlay style={{ color: "white" }} size={30} className="absolute top-[42%] left-[45%] cursor-pointer play-btn"/>
               {/* <img src={`${base_url}${movie.poster_path}`} alt="Loading..."/> */}
             </div>
           );
