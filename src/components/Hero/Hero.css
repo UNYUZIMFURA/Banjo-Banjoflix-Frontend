@@ -11,23 +11,23 @@
 }
 
 @media only screen and (max-width: 1551px) {
-.dv-1 {
-  height: 50%;
-  width: 45%
-}
+  .dv-1 {
+    height: 50%;
+    width: 45%;
+  }
 }
 
 @media only screen and (max-width: 1379px) {
   .dv-1 {
     height: 50%;
-    width: 55%
+    width: 55%;
   }
 }
 
 @media only screen and (max-width: 1128px) {
   .dv-1 {
     height: 50%;
-    width: 65%
+    width: 65%;
   }
 }
 

@@ -3,22 +3,22 @@ import "../Hero/Hero.css";
 import { HiOutlineChevronRight } from "react-icons/hi";
 
 const Start = () => {
-  const [email, setEmail] = useState("")
+  const [email, setEmail] = useState("");
 
   function handleChange(e) {
-    setEmail(e.target.value)
+    setEmail(e.target.value);
   }
 
-//  useEffect(() => {
-//   fetch()
-//   .then(res => res.json())
-//   .then(data => console.log(data))
-//  })
-  
+  //  useEffect(() => {
+  //   fetch()
+  //   .then(res => res.json())
+  //   .then(data => console.log(data))
+  //  })
+
   return (
     <form className="flex w-full text-[#fff] start">
       <input
-      onChange={handleChange}
+        onChange={handleChange}
         className="h-[4.3rem] w-[67%] border-[1px] border-[#8c8c8c] indent-2 outline-none text-[#000] placeholder:text-[#8c8c8c] input-1"
         placeholder="Email address"
         value={email}

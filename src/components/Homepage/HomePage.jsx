@@ -12,7 +12,6 @@ import Kids from "../../images/kids.png";
 import Download from "../../images/download-icon.gif";
 import MovVid from "../../Videos/tv-video.m4v";
 
-
 const HomePage = () => {
   return (
     <div className="flex flex-col">

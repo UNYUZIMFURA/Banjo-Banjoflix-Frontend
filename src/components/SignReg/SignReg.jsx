@@ -1,4 +1,4 @@
-import './SignReg.css'
+import "./SignReg.css";
 import Header from "../CodeReduction/Header";
 import Footer2 from "../CodeReduction/Footer2";
 import Devices from "../../images/devices.png";

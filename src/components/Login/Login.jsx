@@ -3,26 +3,26 @@ import "./Login.css";
 
 const Login = () => {
   const [formData, setFormData] = useState({
-    emailLogin:"",
-    passwordLogin: ""
-  })
+    emailLogin: "",
+    passwordLogin: "",
+  });
 
   function handleChange(e) {
-    const {name, value} = e.target
-    setFormData(prevFormData => {
+    const { name, value } = e.target;
+    setFormData((prevFormData) => {
       return {
-      ...prevFormData,
-      [name]: value
-      }
-    })
+        ...prevFormData,
+        [name]: value,
+      };
+    });
   }
 
-   // useEffect(() => {
+  // useEffect(() => {
   //   fetch()
   //     .then((res) => res.json())
   //     .then((data) => console.log(data));
   // });
-  
+
   return (
     <div className="h-[115vh] flex flex-col items-center justify-around text-[#fff] wrapper">
       <div className="h-[4vh] w-full flex items-center header">
@@ -38,7 +38,7 @@ const Login = () => {
           <form className="h-[80%] w-full flex flex-col justify-around items-center">
             <div className="min-h-[50%] w-full flex flex-col items-center justify-around">
               <input
-              name="emailLogin"
+                name="emailLogin"
                 className="h-[3.2rem] w-[70%] placeholder:text-[#8c8c8c] rounded-[4px] indent-5 outline-none bg-[#333]"
                 placeholder="Email"
                 value={formData.emailLogin}

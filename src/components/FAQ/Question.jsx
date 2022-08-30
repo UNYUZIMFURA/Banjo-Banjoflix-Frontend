@@ -1,4 +1,4 @@
-import './Faq.css'
+import "./Faq.css";
 import { BsPlus } from "react-icons/bs";
 import { useState } from "react";
 import { useRecoilState } from "recoil";

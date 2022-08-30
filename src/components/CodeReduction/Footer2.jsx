@@ -1,4 +1,4 @@
-import '../SignPass/SignPass.css'
+import "../SignPass/SignPass.css";
 
 const Footer2 = (props) => {
   return (

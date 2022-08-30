@@ -1,4 +1,4 @@
-import './WhyStyle.css'
+import "./WhyStyle.css";
 
 const WhyUs4 = (props) => {
   return (

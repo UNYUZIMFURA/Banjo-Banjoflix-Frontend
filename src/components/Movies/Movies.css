@@ -3,75 +3,75 @@
 } */
 
 .trending-holder {
-    background-image: url('../../images/kids.png');
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-color: brown
+  background-image: url("../../images/kids.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: brown;
 }
 
 @media only screen and (max-width: 1440px) {
-    .genres-holder {
-        width: 60%
-    }
+  .genres-holder {
+    width: 60%;
+  }
 }
 
 @media only screen and (max-width: 1105px) {
-    .genres-holder {
-        width: 70%
-    }
+  .genres-holder {
+    width: 70%;
+  }
 
-    .selection-types {
-        width: 20%
-    }
+  .selection-types {
+    width: 20%;
+  }
 }
 
 @media only screen and (max-width: 962px) {
-    .rows-holder {
-        top: 70%
-    }
+  .rows-holder {
+    top: 70%;
+  }
 }
 
 @media only screen and (max-width: 910px) {
-    .genres-holder {
-        width: 100%
-    }
-    .selection-types {
-        display: none;
-    }
+  .genres-holder {
+    width: 100%;
+  }
+  .selection-types {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 780px) {
-    .rows-holder {
-        top: 60%
-    }
+  .rows-holder {
+    top: 60%;
+  }
 }
 
 @media only screen and (max-width: 670px) {
-    .genres-holder {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-    }
+  .genres-holder {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
 
-    .rows-holder {
-        top: 50%;
-    }
+  .rows-holder {
+    top: 50%;
+  }
 }
 
 @media only screen and (max-width: 600px) {
-    .rows-holder {
-        top: 45%
-    }
+  .rows-holder {
+    top: 45%;
+  }
 }
 
 @media only screen and (max-width: 596px) {
-   .nav {
+  .nav {
     display: none;
-   }
+  }
 }
 
 @media only screen and (max-width: 502px) {
-    .rows-holder {
-        top: 30%
-    }
+  .rows-holder {
+    top: 30%;
+  }
 }

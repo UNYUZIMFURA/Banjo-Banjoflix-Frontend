@@ -1,13 +1,14 @@
 @media only screen and (max-width: 1400px) {
- .form-2 {
-  width: 50%
- }
- 
- .sub-quest-holder {
-  width: 60%
- }
+  .form-2 {
+    width: 50%;
+  }
+
+  .sub-quest-holder {
+    width: 60%;
+  }
 }
-@media only screen and (max-width: 1300px){
+
+@media only screen and (max-width: 1300px) {
   .quest-holder > h1 {
     font-size: 1.625rem;
   }
@@ -57,7 +58,7 @@
   }
 }
 
-@media only screen and (max-width: 950px){
+@media only screen and (max-width: 950px) {
   .quest-holder > h1 {
     font-size: 1.625rem;
   }

@@ -7,9 +7,7 @@ import { CodeReduction2, CodeReduction3 } from "./CodeReduction2";
 import Plans from "./Plans";
 
 const PlanForm = () => {
-  function handleSubmit() {
-
-  }
+  function handleSubmit() {}
   return (
     <div className="h-[155vh] flex flex-col items-center justify-between">
       <div className="h-[120vh] w-full flex flex-col justify-between">

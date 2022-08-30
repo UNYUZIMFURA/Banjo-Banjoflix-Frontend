@@ -1,64 +1,64 @@
-@media only screen and (max-width: 1732px){
-    .descr-holder {
-        display: none
-    }
+@media only screen and (max-width: 1732px) {
+  .descr-holder {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 1440px) {
-.all-plans-holder {
+  .all-plans-holder {
     height: 80vh;
     width: 55%;
-}
+  }
 }
 
 @media only screen and (max-width: 1230px) {
-    .all-plans-holder {
-       width: 65%;
-    }
+  .all-plans-holder {
+    width: 65%;
+  }
 }
 
 @media only screen and (max-width: 1160px) {
-    .txt-holder-qual {
-        height: 35vh;
-        width: 50%;
-    }
+  .txt-holder-qual {
+    height: 35vh;
+    width: 50%;
+  }
 
-    .next-btn-2 {
-        margin-top: 2rem;
-        width: 60%;
-        height: 4rem;
-    }
+  .next-btn-2 {
+    margin-top: 2rem;
+    width: 60%;
+    height: 4rem;
+  }
 }
 
 @media only screen and (max-width: 960px) {
-    .plans-holder {
-        width: 50%;
-        height: 15vh;
-    }
+  .plans-holder {
+    width: 50%;
+    height: 15vh;
+  }
 
-    .all-plans-holder {
-       width: 90%;
-    }
+  .all-plans-holder {
+    width: 90%;
+  }
 }
 
 @media only screen and (max-width: 600px) {
-    .descr-holder {
-        display: none;
-    }
+  .descr-holder {
+    display: none;
+  }
 
-    .plans-holder {
-        width: 85%;
-        height: 15vh;
-    }
+  .plans-holder {
+    width: 85%;
+    height: 15vh;
+  }
 
-    .txt-holder-qual {
-        height: 35vh;
-        width: 90%;
-    }
+  .txt-holder-qual {
+    height: 35vh;
+    width: 90%;
+  }
 
-    .next-btn-2 {
-        margin-top: 2rem;
-        width: 90%;
-        height: 4rem;
-    }
+  .next-btn-2 {
+    margin-top: 2rem;
+    width: 90%;
+    height: 4rem;
+  }
 }

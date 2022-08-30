@@ -2,21 +2,21 @@ import { useEffect, useState } from "react";
 import instance from "../../axios";
 import "./Movies.css";
 import TestImg from "../../images/kids.png";
-import {FiPlay} from "react-icons/fi"
+import { FiPlay } from "react-icons/fi";
 
 const base_url = "https://image.tmdb.org/t/p/original/";
 const Row = (props) => {
   const [movies, setMovies] = useState([
-    {"name": "kevin"}, 
-    {"name":"james"},
-    {"name": "kevin"}, 
-    {"name":"james"},
-    {"name": "kevin"}, 
-    {"name":"james"},
-    {"name": "kevin"}, 
-    {"name":"james"},
-    {"name": "kevin"}, 
-    {"name":"james"},
+    { name: "kevin" },
+    { name: "james" },
+    { name: "kevin" },
+    { name: "james" },
+    { name: "kevin" },
+    { name: "james" },
+    { name: "kevin" },
+    { name: "james" },
+    { name: "kevin" },
+    { name: "james" },
   ]);
   useEffect(() => {
     async function fetchData() {
@@ -33,8 +33,16 @@ const Row = (props) => {
         {movies.map((movie) => {
           return (
             <div className="h-full w-[17rem] relative single-movie ml-[1rem]">
-              <img src={TestImg} alt={movie} className="h-full w-full rounded-[3px] object-cover movie-img"/>
-              <FiPlay style={{ color: "white" }} size={30} className="absolute top-[42%] left-[45%] cursor-pointer play-btn"/>
+              <img
+                src={TestImg}
+                alt={movie}
+                className="h-full w-full rounded-[3px] object-cover movie-img"
+              />
+              <FiPlay
+                style={{ color: "white" }}
+                size={30}
+                className="absolute top-[42%] left-[45%] cursor-pointer play-btn"
+              />
               {/* <img src={`${base_url}${movie.poster_path}`} alt="Loading..."/> */}
             </div>
           );

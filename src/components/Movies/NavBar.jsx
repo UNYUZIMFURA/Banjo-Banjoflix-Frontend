@@ -24,7 +24,7 @@ const NavBar = () => {
         <FiBell />
         <div className="h-full w-[27%] flex items-center justify-around ">
           <div className="h-[65%] w-[48%] rounded-[3px] bg-[red]"></div>
-        <FiArrowDown />
+          <FiArrowDown />
         </div>
       </div>
     </div>

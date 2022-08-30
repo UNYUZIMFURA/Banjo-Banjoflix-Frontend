@@ -1,6 +1,6 @@
 import Links from "./Links";
 import Link from "./Link";
-import './Footer.css'
+import "./Footer.css";
 
 const Footer = () => {
   return (
