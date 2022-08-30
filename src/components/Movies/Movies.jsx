@@ -8,6 +8,7 @@ const Movies = () => {
     <div className="flex flex-col justify-around">
       <div className="h-screen trending-holder">
       <NavBar />
+      <div className="h-[90vh] w-[50%] top-[10%] z-20 left-[25%] fixed bg-[yellow]"></div>
       </div>
       <div className="flex flex-col">
       <Row
