@@ -1,0 +1,23 @@
+@media only screen and (max-width: 1100px) {
+  .who-img-holder {
+    width: 10%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .who-img-holder {
+    width: 13%;
+  }
+}
+
+@media only screen and (max-width: 610px) {
+  .who-img-holder {
+    width: 18%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .who-img-holder {
+    width: 25%;
+  }
+}
