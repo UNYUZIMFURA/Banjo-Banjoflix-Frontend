@@ -5,8 +5,10 @@ import NavBar from "./NavBar";
 
 const Movies = () => {
   return (
-    <div className="h-screen flex flex-col justify-around">
+    <div className="flex flex-col justify-around">
+      <div className="h-screen trending-holder">
       <NavBar />
+      </div>
       <div className="h-1/2 flex flex-col">
       <Row
         title="Trending Now"

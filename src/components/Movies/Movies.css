@@ -1,3 +1,9 @@
 /* .single-movie:hover .play-btn{
     display: block;
 } */
+
+.trending-holder {
+    background-image: url('../../images/kids.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}

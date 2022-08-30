@@ -5,7 +5,7 @@ import { FiArrowDown } from "react-icons/fi";
 
 const NavBar = () => {
   return (
-    <div className="h-[10%] w-full flex items-center justify-around">
+    <div className="h-[10%] w-full fixed bg-[green] flex items-center justify-around">
       <div className="w-[48%]  flex justify-between items-center">
         <h1 className="text-3xl text-[#e50914] font-bold logo">BANJOFLIX</h1>
         <div className="w-[80%] h-full flex justify-around items-center text-[black]">
