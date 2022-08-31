@@ -7,9 +7,11 @@ const Header = (props) => {
       }}
     >
       <h1 className="text-4xl text-[#e50914] font-bold ml-[3rem]">BANJOFLIX</h1>
-      <h3 className="text-[1.2rem] text-[#333] font-[500] mr-[3rem]">
-        Sign In
-      </h3>
+      <a href="/login">
+        <h3 className="text-[1.2rem] text-[#333] font-[500] mr-[3rem]">
+          Sign In
+        </h3>
+      </a>
     </div>
   );
 };

@@ -74,7 +74,9 @@ const Login = () => {
         <div className=" h-[25%] flex flex-col items-center justify-center">
           <div className="flex w-[70%]">
             <h3 className="text-[#737373]">New to Netflix?</h3>
-            <h3 className="text-[#fff] ml-[5px]">Sign up now</h3>
+            <a href="/">
+              <h3 className="text-[#fff] ml-[5px]">Sign up now</h3>
+            </a>
           </div>
           <div className="text-[0.95rem] w-[70%] leading-[1.3rem] mt-[0.7rem]">
             <h3 className="text-[#8c8c8c] text-[0.9rem]">
