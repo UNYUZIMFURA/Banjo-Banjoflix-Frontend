@@ -8,7 +8,7 @@ const Movies = () => {
     <div className="flex flex-col justify-around relative">
       <div className="h-screen trending-holder">
         <NavBar />
-        <div className="hidden h-[90vh] w-[50%] top-[10%] z-20 left-[25%] fixed bg-[yellow]"></div>
+        <div className="hidden h-[90vh] w-[50%] top-[10%] left-[25%] z-20 fixed bg-[yellow]"></div>
       </div>
       <div className="w-full absolute top-[87%] flex flex-col rows-holder">
         <Row title="Trending Now" fetchUrl={requests.fetchTrending} />

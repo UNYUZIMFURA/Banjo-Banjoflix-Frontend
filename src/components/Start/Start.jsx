@@ -5,22 +5,21 @@ import StateContext from "../../helpers/useContext";
 
 const Start = () => {
   const [email, setEmail] = useState("");
-  const {enteredEmail, setEnteredEmail} = useContext(StateContext)
+  const { enteredEmail, setEnteredEmail } = useContext(StateContext);
 
   function handleChange(e) {
     setEmail(e.target.value);
   }
 
   function handleSubmit(e) {
-    e.preventDefault()
-    setEnteredEmail(email)
+    e.preventDefault();
+    setEnteredEmail(email);
   }
-console.log(enteredEmail)
+  console.log(enteredEmail);
   useEffect(() => {
     fetch("http://localhost:3030/homepage", {
       headers: {
         "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": true,
       },
       method: "POST",
     })

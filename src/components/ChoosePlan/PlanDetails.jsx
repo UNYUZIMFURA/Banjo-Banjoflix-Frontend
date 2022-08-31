@@ -47,7 +47,7 @@ const PlanDetails = (props) => {
         </h2>
       </div>
       <div
-        className=" h-[25%] flex items-center text-[#333] mr-[6rem]"
+        className="h-[25%] flex items-center text-[#333] mr-[6rem]"
         style={{
           marginRight: props.bigMargin,
         }}

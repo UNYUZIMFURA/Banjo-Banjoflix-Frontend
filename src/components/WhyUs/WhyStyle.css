@@ -18,15 +18,6 @@
     width: 45%;
   }
 
-  .stranger-img {
-    width: 90%;
-  }
-
-  .box {
-    height: 5.5rem;
-    top: 65%;
-  }
-
   .holder-4 {
     width: 45%;
   }
@@ -40,12 +31,18 @@
     width: 30vw;
   }
 
+  .stranger-img {
+    width: 90%;
+  }
+
+  .box {
+    height: 5.5rem;
+    top: 65%;
+  }
+
   .final-div {
     width: 55%;
   }
-}
-
-@media only screen and (max-width: 1160px) {
 }
 
 @media only screen and (max-width: 950px) {

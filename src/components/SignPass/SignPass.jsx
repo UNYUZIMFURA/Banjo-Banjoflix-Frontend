@@ -6,9 +6,9 @@ import StateContext from "../../helpers/useContext";
 
 const SignPass = () => {
   const [password, setPassword] = useState("");
-  const { enteredEmail } = useContext(StateContext)
+  const { enteredEmail } = useContext(StateContext);
 
-  console.log(enteredEmail)
+  console.log(enteredEmail);
   function handleChange(e) {
     setPassword(e.target.value);
   }
@@ -41,7 +41,7 @@ const SignPass = () => {
             <div className="h-[20%]flex flex-col justify-around">
               <h3 className="text-[#333]">Email</h3>
               <h3 className="text-[#333] font-medium text-[1rem]">
-                  {enteredEmail}
+                {enteredEmail}
               </h3>
             </div>
             <form className="h-[70%] flex flex-col justify-around">

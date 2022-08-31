@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 
 const Faq = () => {
   const [email2, setEmail2] = useState("");
+
   function handleChange(e) {
     setEmail2(e.target.value);
   }

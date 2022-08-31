@@ -11,7 +11,7 @@ const ChoosePlan = () => {
         <Header height="7vh" />
         <div className="h-[50vh] w-[20%] flex flex-col items-center justify-center choose-holder">
           <div className="h-[40%] w-full flex flex-col justify-around">
-            <div className="h-[30%] w-[30%] flex  items-center justify-center mx-auto">
+            <div className="h-[30%] w-[30%] flex items-center justify-center mx-auto">
               <img
                 src={CheckMark}
                 alt=""

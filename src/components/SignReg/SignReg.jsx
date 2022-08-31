@@ -5,7 +5,7 @@ import Devices from "../../images/devices.png";
 
 const SignReg = () => {
   return (
-    <div className=" h-screen flex flex-col justify-between">
+    <div className="h-screen flex flex-col justify-between">
       <div className="h-[60vh] flex flex-col justify-between items-center">
         <Header />
         <div className="h-[40vh] w-[20%] flex flex-col items-center justify-around main-holder">

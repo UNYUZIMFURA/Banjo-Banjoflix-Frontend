@@ -37,6 +37,12 @@
     justify-content: center;
   }
 
+  .dv-1 {
+    margin-top: 5rem;
+    height: 95%;
+    width: 100%;
+  }
+
   .logo {
     font-size: 1.8rem;
     margin-top: 0.5rem;
@@ -46,12 +52,6 @@
     height: 1.8rem;
     width: 4.3rem;
     margin-top: 0.5rem;
-  }
-
-  .dv-1 {
-    margin-top: 5rem;
-    height: 95%;
-    width: 100%;
   }
 
   .txt-11 {
@@ -103,6 +103,12 @@
     justify-content: center;
   }
 
+  .dv-1 {
+    margin-top: 5rem;
+    height: 95%;
+    width: 100%;
+  }
+
   .logo {
     font-size: 1.8rem;
     margin-top: 0.5rem;
@@ -112,12 +118,6 @@
     height: 1.8rem;
     width: 4.3rem;
     margin-top: 0.5rem;
-  }
-
-  .dv-1 {
-    margin-top: 5rem;
-    height: 95%;
-    width: 100%;
   }
 
   .txt-11 {

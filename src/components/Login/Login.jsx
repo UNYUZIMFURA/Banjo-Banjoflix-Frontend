@@ -38,6 +38,7 @@ const Login = () => {
           <form className="h-[80%] w-full flex flex-col justify-around items-center">
             <div className="min-h-[50%] w-full flex flex-col items-center justify-around">
               <input
+                onChange={handleChange}
                 name="emailLogin"
                 className="h-[3.2rem] w-[70%] placeholder:text-[#8c8c8c] rounded-[4px] indent-5 outline-none bg-[#333]"
                 placeholder="Email"
@@ -47,6 +48,7 @@ const Login = () => {
                 Enter a valid Email
               </h3>
               <input
+                onChange={handleChange}
                 type="password"
                 name="passwordLogin"
                 className="h-[3.2rem] w-[70%] placeholder:text-[#8c8c8c] rounded-[4px] indent-5 outline-none bg-[#333]"
@@ -71,7 +73,7 @@ const Login = () => {
             </div>
           </form>
         </div>
-        <div className=" h-[25%] flex flex-col items-center justify-center">
+        <div className="h-[25%] flex flex-col items-center justify-center">
           <div className="flex w-[70%]">
             <h3 className="text-[#737373]">New to Netflix?</h3>
             <a href="/">
