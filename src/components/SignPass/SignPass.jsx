@@ -1,10 +1,14 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import "./SignPass.css";
 import Footer2 from "../CodeReduction/Footer2";
 import Header from "../CodeReduction/Header";
+import StateContext from "../../helpers/useContext";
 
 const SignPass = () => {
   const [password, setPassword] = useState("");
+  const { enteredEmail } = useContext(StateContext)
+
+  console.log(enteredEmail)
   function handleChange(e) {
     setPassword(e.target.value);
   }
@@ -25,7 +29,7 @@ const SignPass = () => {
             </h3>
             <div className="">
               <h2 className="text-[2rem] text-[#333] font-medium leading-[2.5rem]">
-                Welcome back! <br />
+                Welcome Here! <br />
                 Joining Banjoflix is easy
               </h2>
             </div>
@@ -37,11 +41,12 @@ const SignPass = () => {
             <div className="h-[20%]flex flex-col justify-around">
               <h3 className="text-[#333]">Email</h3>
               <h3 className="text-[#333] font-medium text-[1rem]">
-                joykevinrobin1@gmail.com
+                {enteredEmail}
               </h3>
             </div>
             <form className="h-[70%] flex flex-col justify-around">
               <input
+                onChange={handleChange}
                 type="password"
                 className="w-[90%] h-[3.5rem] border-[1px] border-[#737373] indent-3 outline-none"
                 placeholder="Enter your password"

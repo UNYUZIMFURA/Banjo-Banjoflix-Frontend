@@ -1,22 +1,35 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import "../Hero/Hero.css";
 import { HiOutlineChevronRight } from "react-icons/hi";
+import StateContext from "../../helpers/useContext";
 
 const Start = () => {
   const [email, setEmail] = useState("");
+  const {setEnteredEmail} = useContext(StateContext)
 
   function handleChange(e) {
     setEmail(e.target.value);
   }
 
-  //  useEffect(() => {
-  //   fetch()
-  //   .then(res => res.json())
-  //   .then(data => console.log(data))
-  //  })
+  function handleSubmit(e) {
+    e.preventDefault()
+    setEnteredEmail(email)
+  }
+
+  useEffect(() => {
+    fetch("http://localhost:3030/homepage", {
+      headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": true,
+      },
+      method: "POST",
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+  }, []);
 
   return (
-    <form className="flex w-full text-[#fff] start">
+    <form className="flex w-full text-[#fff] start" onSubmit={handleSubmit}>
       <input
         onChange={handleChange}
         className="h-[4.3rem] w-[67%] border-[1px] border-[#8c8c8c] indent-2 outline-none text-[#000] placeholder:text-[#8c8c8c] input-1"

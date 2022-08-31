@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from "./components/Homepage/HomePage";
@@ -8,10 +9,15 @@ import ChoosePlan from "./components/ChoosePlan/ChoosePlan";
 import PlanForm from "./components/PlanForm/PlanForm";
 import SignReg from "./components/SignReg/SignReg";
 import Movies from "./components/Movies/Movies";
+import StateContext from "./helpers/useContext";
 
 const App = () => {
+  const [enteredEmail, setEnteredEmail] = useState("")
+  const [enteredEmai, setEnteredEmai] = useState("joy@gmail.com")
+
   return (
     <div>
+      <StateContext.Provider value={{enteredEmail,setEnteredEmail,enteredEmai,setEnteredEmai}}>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -25,6 +31,7 @@ const App = () => {
           <Route path="*" element={<HomePage />} />
         </Routes>
       </BrowserRouter>
+      </StateContext.Provider>
     </div>
   );
 };
