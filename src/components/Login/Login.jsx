@@ -1,11 +1,17 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./Login.css";
 
 const Login = () => {
+  const [submitTriggered, setSubmitTriggered] = useState(false);
   const [formData, setFormData] = useState({
     emailLogin: "",
     passwordLogin: "",
   });
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    setSubmitTriggered((prevTriggered) => !prevTriggered);
+  }
 
   function handleChange(e) {
     const { name, value } = e.target;
@@ -17,25 +23,43 @@ const Login = () => {
     });
   }
 
-  // useEffect(() => {
-  //   fetch()
-  //     .then((res) => res.json())
-  //     .then((data) => console.log(data));
-  // });
+  useEffect(() => {
+    function fetchData() {
+      fetch("http://localhost:3020/login", {
+        headers: {
+          "Content-Type": "application/json",
+        },
+        method: "POST",
+        body: JSON.stringify({
+          email: formData.emailLogin,
+          password: formData.passwordLogin,
+        }),
+      })
+        .then((res) => res.json())
+        .then((data) => console.log(data));
+    }
+    fetchData();
+  }, [submitTriggered]);
 
   return (
     <div className="h-[115vh] flex flex-col items-center justify-around text-[#fff] wrapper">
       <div className="h-[4vh] w-full flex items-center header">
-        <h1 className="text-4xl text-[#e50914] font-bold ml-[4rem]">
-          BANJOFLIX
-        </h1>
+        <a href="/">
+          <h1 className="text-4xl text-[#e50914] font-bold cursor-pointer ml-[4rem]">
+            BANJOFLIX
+          </h1>
+        </a>
       </div>
       <div className="h-[70vh] w-[24.5%] flex flex-col items-center justify-evenly bg-[rgba(0,0,0,.75)] mb-[7rem] sign-form">
         <div className=" h-[50%] w-full flex flex-col justify-between">
           <h2 className="text-[#fff] text-[2rem] font-bold ml-[4.5rem]">
             Sign In
           </h2>
-          <form className="h-[80%] w-full flex flex-col justify-around items-center">
+          <form
+            className="h-[80%] w-full flex flex-col justify-around items-center"
+            onSubmit={handleSubmit}
+            method="POST"
+          >
             <div className="min-h-[50%] w-full flex flex-col items-center justify-around">
               <input
                 onChange={handleChange}

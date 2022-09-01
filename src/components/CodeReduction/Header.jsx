@@ -6,7 +6,11 @@ const Header = (props) => {
         height: props.height,
       }}
     >
-      <h1 className="text-4xl text-[#e50914] font-bold ml-[3rem]">BANJOFLIX</h1>
+      <a href="/">
+        <h1 className="text-4xl text-[#e50914] font-bold cursor-pointer ml-[3rem]">
+          BANJOFLIX
+        </h1>
+      </a>
       <a href="/login">
         <h3 className="text-[1.2rem] text-[#333] font-[500] mr-[3rem]">
           Sign In
