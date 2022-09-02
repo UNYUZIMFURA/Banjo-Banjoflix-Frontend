@@ -9,6 +9,10 @@
   background-color: brown;
 }
 
+.rows-holder {
+  background-color: rgb(20,20,20);
+}
+
 @media only screen and (max-width: 1440px) {
   .genres-holder {
     width: 60%;

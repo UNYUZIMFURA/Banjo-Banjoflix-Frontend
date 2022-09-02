@@ -15,17 +15,17 @@ const Start = () => {
     e.preventDefault();
     setEnteredEmail(email);
   }
-  console.log(enteredEmail);
-  useEffect(() => {
-    fetch("http://localhost:3030/homepage", {
-      headers: {
-        "Content-Type": "application/json",
-      },
-      method: "POST",
-    })
-      .then((res) => res.json())
-      .then((data) => console.log(data));
-  }, []);
+
+  // useEffect(() => {
+  //   fetch("http://localhost:3030/homepage", {
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     method: "POST",
+  //   })
+  //     .then((res) => res.json())
+  //     .then((data) => console.log(data));
+  // }, []);
 
   return (
     <form className="flex w-full text-[#fff] start" onSubmit={handleSubmit}>

@@ -5,9 +5,13 @@ import { FiArrowDown } from "react-icons/fi";
 
 const NavBar = () => {
   return (
-    <div className="h-[10%] w-full fixed text-[#fff] bg-[black] flex items-center justify-between nav">
+    <div className="h-[10%] w-full fixed text-[#fff] bg-[rgb(20,20,20)] flex items-center justify-between nav">
       <div className="w-[48%]  flex justify-between items-center ml-[3%] genres-holder">
-        <h1 className="text-3xl text-[#e50914] font-bold logo">BANJOFLIX</h1>
+        <a href="/">
+          <h1 className="text-3xl text-[#e50914] font-bold cursor-pointer logo">
+            BANJOFLIX
+          </h1>
+        </a>
         <div className="w-[80%] h-full flex justify-around items-center">
           <h3 className="">Home</h3>
           <h3 className="">TV Shows</h3>

@@ -12,7 +12,7 @@ import Movies from "./components/Movies/Movies";
 import StateContext from "./helpers/useContext";
 
 const App = () => {
-  const [enteredEmail, setEnteredEmail] = useState("");
+  const [enteredEmail, setEnteredEmail] = useState();
   const [enteredEmai, setEnteredEmai] = useState("joy@gmail.com");
 
   return (
