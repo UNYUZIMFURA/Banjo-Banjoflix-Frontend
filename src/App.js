@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Protect from "./utils/Protect";
 import HomePage from "./components/Homepage/HomePage";
 import Login from "./components/Login/Login";
 import WhoIs from "./components/WhoIs/WhoIs";
@@ -23,7 +24,9 @@ const App = () => {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/browse" element={<Movies />} />
+            <Route element={<Protect />}>
+              <Route path="/browse" element={<Movies />} />
+            </Route>
             <Route path="login" element={<Login />} />
             <Route path="/who" element={<WhoIs />} />
             <Route path="/signup/password" element={<SignPass />} />
