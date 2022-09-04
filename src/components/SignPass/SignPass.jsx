@@ -7,8 +7,7 @@ import StateContext from "../../helpers/useContext";
 const SignPass = () => {
   const [password, setPassword] = useState("");
   const { enteredEmail } = useContext(StateContext);
-
-  console.log(enteredEmail);
+  
   function handleChange(e) {
     setPassword(e.target.value);
   }

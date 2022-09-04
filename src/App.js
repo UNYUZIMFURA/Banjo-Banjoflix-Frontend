@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, createContext } from "react";
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Protect from "./utils/Protect";
@@ -13,22 +13,19 @@ import Movies from "./components/Movies/Movies";
 import StateContext from "./helpers/useContext";
 
 const App = () => {
-  const [enteredEmail, setEnteredEmail] = useState();
-  const [enteredEmai, setEnteredEmai] = useState("joy@gmail.com");
+  const [enteredEmail, setEnteredEmail] = useState("");
 
   return (
     <div>
-      <StateContext.Provider
-        value={{ enteredEmail, setEnteredEmail, enteredEmai, setEnteredEmai }}
-      >
+      <StateContext.Provider value={{ enteredEmail, setEnteredEmail }}>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route element={<Protect />}>
+              <Route path="/who" element={<WhoIs />} />
               <Route path="/browse" element={<Movies />} />
             </Route>
             <Route path="login" element={<Login />} />
-            <Route path="/who" element={<WhoIs />} />
             <Route path="/signup/password" element={<SignPass />} />
             <Route path="/signup" element={<ChoosePlan />} />
             <Route path="/signup/planform" element={<PlanForm />} />

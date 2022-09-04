@@ -1,8 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import Stranger from "../../images/stranger.png";
 import './Who.css'
 
 
 const WhoIs = () => {
+  const navigate = useNavigate()
   return (
     <div className="h-screen flex flex-col bg-[#000]">
       <div className="h-[60%] flex flex-col justify-between">
@@ -14,7 +16,7 @@ const WhoIs = () => {
             Who's watching?
           </h1>
           <div className="h-[70%]  flex items-start justify-center">
-            <div className="h-[67%] w-[6.5%] flex flex-col justify-between rounded-[3px] cursor-pointer who-img-holder">
+            <div className="h-[67%] w-[6.5%] flex flex-col justify-between rounded-[3px] cursor-pointer who-img-holder" onClick={() => navigate("/browse")}>
               <img
                 src={Stranger}
                 alt=""

@@ -2,7 +2,7 @@ import { Outlet, Navigate } from "react-router-dom";
 
 const Protect = () => {
   let auth = {
-    token: true,
+    token: false,
   };
   return auth.token ? <Outlet /> : <Navigate to="/login" />;
 };

@@ -62,6 +62,7 @@ const Login = () => {
           >
             <div className="min-h-[50%] w-full flex flex-col items-center justify-around">
               <input
+                type="email"
                 onChange={handleChange}
                 name="emailLogin"
                 className="h-[3.2rem] w-[70%] placeholder:text-[#8c8c8c] rounded-[4px] indent-5 outline-none bg-[#333]"

@@ -39,8 +39,8 @@ const Row = (props) => {
   //   fetchData();
   // }, [props.fetchUrl]);
   return (
-    <div className="h-[21vh] flex flex-col justify-around mt-[1rem]">
-      <h2 className="text-[1.3rem] text-[#fff] text-[#e5e5e5]">
+    <div className="h-[21vh] flex flex-col justify-around mt-[2.4rem] ml-[3.5rem]">
+      <h2 className="text-[1.3rem] text-[#fff] text-[#e5e5e5] ml-[0.3rem]">
         {props.title}
       </h2>
       <div className="h-[75%] w-full flex overflow-x-scroll movie-holder">
