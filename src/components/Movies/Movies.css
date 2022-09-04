@@ -13,6 +13,19 @@
   background-color: rgb(20,20,20);
 }
 
+.movie-holder {
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.movie-holder::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+
+
 @media only screen and (max-width: 1440px) {
   .genres-holder {
     width: 60%;

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./SignReg.css";
 import Header from "../CodeReduction/Header";
 import Footer2 from "../CodeReduction/Footer2";
@@ -21,9 +22,12 @@ const SignReg = () => {
               any device at any time.
             </h2>
           </div>
-          <button className="h-[4rem] w-[92%] text-[white] text-[1.3rem] bg-[#e50914] rounded-[3px] mt-[1rem]">
+          <Link
+            to="/browse"
+            className="flex items-center justify-center h-[4rem] w-[92%] text-[white] text-[1.3rem] bg-[#e50914] rounded-[3px] mt-[1rem]"
+          >
             Next
-          </button>
+          </Link>
         </div>
       </div>
       <Footer2 height="20vh" />

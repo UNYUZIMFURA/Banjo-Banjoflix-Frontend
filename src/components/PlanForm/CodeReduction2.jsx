@@ -1,12 +1,24 @@
+import { Link } from "react-router-dom";
 import "./PlanForm.css";
+import { BsPhone, BsTabletLandscape } from "react-icons/bs";
+import { MdComputer } from "react-icons/md";
+import { RiComputerLine } from "react-icons/ri";
 
 const CodeReduction2 = () => {
   return (
     <div className="flex flex-col h-full justify-around">
-      <div className="h-[20%] w-[5rem] bg-[#e50914] rounded-[2px]"></div>
-      <div className="h-[20%] w-[5rem] bg-[#e50914] rounded-[2px]"></div>
-      <div className="h-[20%] w-[5rem] bg-[#e50914] rounded-[2px]"></div>
-      <div className="h-[20%] w-[5rem] bg-[#e50914] rounded-[2px]"></div>
+      <div className="flex items-center justify-center h-[20%] w-[5rem] rounded-[2px]">
+        <BsPhone size={30} fill="#e50914" />
+      </div>
+      <div className="flex items-center justify-center h-[20%] w-[5rem] rounded-[2px]">
+        <BsTabletLandscape size={30} fill="#e50914" />
+      </div>
+      <div className="flex items-center justify-center h-[20%] w-[5rem] rounded-[2px]">
+        <MdComputer size={30} fill="#e50914" />
+      </div>
+      <div className="flex items-center justify-center h-[20%] w-[5rem] rounded-[2px]">
+        <RiComputerLine size={30} fill="#e50914" />
+      </div>
     </div>
   );
 };
@@ -27,9 +39,12 @@ const CodeReduction3 = () => {
           with basic and Mode
         </h2>
       </div>
-      <button className="h-[4rem] w-[35%] text-[#fff] text-[1.2rem] rounded-[4px] outline-none bg-[#e50914] next-btn-2">
-        Next
-      </button>
+      <Link
+        to="/signup/registration"
+        className="flex items-center justify-center h-[4rem] w-[35%] text-[#fff] text-[1.2rem] rounded-[4px] outline-none bg-[#e50914] next-btn-2"
+      >
+       Next
+      </Link>
     </div>
   );
 };
