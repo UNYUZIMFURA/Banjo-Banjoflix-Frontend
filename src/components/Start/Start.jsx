@@ -15,11 +15,8 @@ const Start = () => {
 
   useEffect(() => {
     console.log(email);
-    localStorage.setItem("enteredEmail", JSON.stringify(email));
+    window.localStorage.setItem("enteredEmail", JSON.stringify(email));
   }, [submitted]);
-
-  function directTo() {
-  }
 
   function handleSubmit(e) {
     e.preventDefault();

@@ -1,13 +1,14 @@
 import "./Movies.css";
 import { useRecoilState } from "recoil";
 import { movieSelected } from "../../atoms";
+import { FaPlay, FaAdd, FaLike, FaSpeakerDeck } from "react-icons/fa";
 import requests from "./Fetch";
 import Row from "./Row";
 import NavBar from "./NavBar";
 
 const Movies = () => {
   const [hasSelected] = useRecoilState(movieSelected);
-  console.log(hasSelected)
+  console.log(hasSelected);
   return (
     <div className="flex flex-col justify-around relative">
       <div className="h-screen trending-holder">
@@ -15,6 +16,20 @@ const Movies = () => {
         {hasSelected ? (
           <div className="h-screen w-full fixed z-10 test">
             <div className="h-[88vh] w-[48%] flex flex-col fixed top-[4%] left-[25%] rounded-t-[5px] watch-movie">
+              <div className="absolute top-[2%] right-[2%] h-[4.2vh] w-[2.2vw] bg-[#000] rounded-full cursor-pointer z-40"></div>
+              <div className="h-[10%] bg-[gray] w-full flex items-center justify-between absolute top-[50%] left-0 z-40">
+                <div className="h-full w-[26%] bg-[yellow] flex items-center justify-around ml-[1rem]">
+                  <button className="h-[52%] w-[50%] flex items-center justify-center rounded-[4px] bg-[red]">
+                    <span>
+                      <FaPlay />
+                    </span>
+                    <h3 className="ml-[0.6rem]">Play</h3>
+                  </button>
+                  <div className="flex items-center justify-center h-[52%] w-[18%] border-[1px] rounded-full"></div>
+                  <div className="flex items-center justify-center h-[52%] w-[18%] border-[1px] rounded-full"></div>
+                </div>
+                <div className="flex items-center justify-center h-[52%] w-[5%] border-[1px] rounded-full mr-[1rem]"></div>
+              </div>
               <div className="h-[65%] w-full z-30 rounded-t-[5px] bg-[red]"></div>
               <div className="h-[30%] w-full flex flex-col items-center justify-around movie-desc">
                 <div className="h-[70%] w-full flex justify-evenly ">

@@ -1,9 +1,12 @@
-import Question from "./Question";
-import Question2 from "./Question2";
 import "./Faq.css";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import Question from "./Question";
+import Question2 from "./Question2";
+
 
 const Faq = () => {
+  const navigate = useNavigate
   const [email2, setEmail2] = useState("");
 
   function handleChange(e) {

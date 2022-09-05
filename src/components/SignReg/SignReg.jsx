@@ -18,8 +18,7 @@ const SignReg = () => {
               Finish setting up your account
             </h2>
             <h2 className="w-4/5 text-center text-[#333] text-[1.2rem] leading-[1.8rem] txt-2">
-              Banjoflix is personalized for you. Create a password to watch on
-              any device at any time.
+              Banjoflix is personalized for you. You are authorized to watch at any device anytime!
             </h2>
           </div>
           <Link
