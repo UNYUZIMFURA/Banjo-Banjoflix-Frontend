@@ -2,10 +2,11 @@ import "./Movies.css";
 import { FiSearch } from "react-icons/fi";
 import { FiBell } from "react-icons/fi";
 import { FiArrowDown } from "react-icons/fi";
+import AccountImg from "../../images/account.png";
 
 const NavBar = () => {
   return (
-    <div className="h-[10%] w-full fixed text-[#fff] bg-[rgb(20,20,20)] flex items-center justify-between nav">
+    <div className="h-[10%] w-full fixed text-[#fff] flex items-center justify-between z-10 nav">
       <div className="w-[48%]  flex justify-between items-center ml-[3%] genres-holder">
         <a href="/">
           <h1 className="text-3xl text-[#e50914] font-bold cursor-pointer logo">
@@ -27,7 +28,13 @@ const NavBar = () => {
         <h3>DVD</h3>
         <FiBell />
         <div className="h-full w-[27%] flex items-center justify-around ">
-          <div className="h-[65%] w-[48%] rounded-[3px] bg-[red]"></div>
+          <div className="h-[67%] w-[46%] rounded-[3px]">
+            <img
+              src={AccountImg}
+              alt=""
+              className="h-full w-full rounded-[3px] object-cover"
+            />
+          </div>
           <FiArrowDown />
         </div>
       </div>

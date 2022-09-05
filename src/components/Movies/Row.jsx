@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
 import axio from "../../axios";
+import { useRecoilState } from "recoil";
+import { movieSelected } from "../../atoms";
 import "./Movies.css";
 import TestImg from "../../images/kids.png";
 import { FiPlay } from "react-icons/fi";
 
 const base_url = "https://image.tmdb.org/t/p/original/";
 const Row = (props) => {
+  const [isSelected,setIsSelected] = useRecoilState(movieSelected)
   // const [movies, setMovies] = useState([])
   const [movies, setMovies] = useState([
     { name: "kevin" },
@@ -39,18 +42,18 @@ const Row = (props) => {
   //   fetchData();
   // }, [props.fetchUrl]);
   return (
-    <div className="h-[21vh] flex flex-col justify-around mt-[2.4rem] ml-[3.5rem]">
+    <div className="h-[21vh] flex flex-col justify-around mt-[2.4rem] ml-[3.5rem] single-row">
       <h2 className="text-[1.3rem] text-[#fff] text-[#e5e5e5] ml-[0.3rem]">
         {props.title}
       </h2>
       <div className="h-[75%] w-full flex overflow-x-scroll movie-holder">
         {movies.map((movie) => {
           return (
-            <div className="h-full min-w-[17.5rem] relative single-movie ml-[0.3rem]">
+            <div className="h-full min-w-[17.5rem] relative ml-[0.3rem] single-movie">
               <img
                 src={TestImg}
                 alt=""
-                className="w-full h-full rounded-[4px] object-cover movie-img"
+                className="w-full h-full rounded-[4px] object-cover cursor-pointer movie-img"
               />
               {/* <img
                 src={`${base_url}${movie.poster_path}`}
@@ -60,7 +63,8 @@ const Row = (props) => {
               <FiPlay
                 style={{ color: "white" }}
                 size={30}
-                className="absolute top-[42%] left-[45%] cursor-pointer play-btn"
+                className="opacity-0 absolute top-[42%] left-[44%] cursor-pointer play-btn"
+                onClick={() => setIsSelected(true)}
               />
             </div>
           );

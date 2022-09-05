@@ -10,14 +10,10 @@ import ChoosePlan from "./components/ChoosePlan/ChoosePlan";
 import PlanForm from "./components/PlanForm/PlanForm";
 import SignReg from "./components/SignReg/SignReg";
 import Movies from "./components/Movies/Movies";
-import StateContext from "./helpers/useContext";
 
 const App = () => {
-  const [enteredEmail, setEnteredEmail] = useState("");
-
   return (
     <div>
-      <StateContext.Provider value={{ enteredEmail, setEnteredEmail }}>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<HomePage />} />
@@ -33,7 +29,6 @@ const App = () => {
             <Route path="*" element={<HomePage />} />
           </Routes>
         </BrowserRouter>
-      </StateContext.Provider>
     </div>
   );
 };

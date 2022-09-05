@@ -6,3 +6,8 @@ export const activeNow = atom({
   key: "activeNow",
   default: 0,
 });
+
+export const movieSelected = atom({
+  key: "movieSelected",
+  default: false
+})

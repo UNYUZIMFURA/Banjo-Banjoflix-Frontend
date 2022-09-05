@@ -1,12 +1,12 @@
 import { useContext, useEffect, useState } from "react";
 import "./SignPass.css";
 import Footer2 from "../CodeReduction/Footer2";
-import Header from "../CodeReduction/Header";
-import StateContext from "../../helpers/useContext";
+import Header from "../CodeReduction/Header"
+import { useNavigate } from "react-router-dom";
 
 const SignPass = () => {
+  const navigate = useNavigate()
   const [password, setPassword] = useState("");
-  const { enteredEmail } = useContext(StateContext);
   
   function handleChange(e) {
     setPassword(e.target.value);
@@ -40,7 +40,7 @@ const SignPass = () => {
             <div className="h-[20%]flex flex-col justify-around">
               <h3 className="text-[#333]">Email</h3>
               <h3 className="text-[#333] font-medium text-[1rem]">
-                {enteredEmail}
+                {}
               </h3>
             </div>
             <form className="h-[70%] flex flex-col justify-around">
@@ -53,7 +53,7 @@ const SignPass = () => {
               ></input>
 
               <h3 className="text-[#0071eb]">Forgot your password?</h3>
-              <button className="w-[90%] h-[3.5rem] bg-[red]  rounded-[3px] text-[#fff]  cursor-pointer">
+              <button className="w-[90%] h-[3.5rem] bg-[red]  rounded-[3px] text-[#fff]  cursor-pointer" onClick={() => navigate('/signup/planform')}>
                 Next
               </button>
             </form>

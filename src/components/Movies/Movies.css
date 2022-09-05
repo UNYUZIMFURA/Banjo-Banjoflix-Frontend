@@ -1,6 +1,19 @@
-/* .single-movie:hover .play-btn{
-    display: block;
-} */
+.single-movie:hover .play-btn{
+    opacity: 1;
+    transition: 0.2s ease-in-out;
+}
+
+.single-movie:hover img{
+ opacity: 0.7;
+}
+
+.test {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.movie-desc {
+  background-color: rgb(31, 31, 31);
+}
 
 .trending-holder {
   background-image: url("../../images/kids.png");
@@ -10,21 +23,41 @@
 }
 
 .rows-holder {
-  background-color: rgb(20,20,20);
+  background-color: rgb(20, 20, 20);
 }
 
 .movie-holder {
-    overflow-y: scroll;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .movie-holder::-webkit-scrollbar {
-    width: 0;
-    height: 0;
+  width: 0;
+  height: 0;
 }
 
+@media only screen and (max-width: 1700px) {
+  .single-row {
+    margin-left: 0;
+  }
 
+  .watch-movie {
+    width: 60%;
+    left: 20%;
+  }
+}
+
+@media only screen and (max-width: 1500px) {
+  .watch-movie {
+    width: 60%;
+    left: 20%;
+  }
+
+  .movie-details {
+    width: 80%;
+  }
+}
 
 @media only screen and (max-width: 1440px) {
   .genres-holder {
@@ -33,6 +66,15 @@
 }
 
 @media only screen and (max-width: 1105px) {
+  .watch-movie {
+    width: 95%;
+    left: 2.5%;
+  }
+
+  .movie-details {
+    width: 80%;
+  }
+
   .genres-holder {
     width: 70%;
   }
@@ -76,8 +118,21 @@
 }
 
 @media only screen and (max-width: 600px) {
+  .single-row {
+    margin-left: 0;
+  }
+
   .rows-holder {
     top: 45%;
+  }
+
+  .watch-movie {
+    width: 100%;
+    left: 0;
+  }
+
+  .movie-details {
+    width: 100%;
   }
 }
 

@@ -1,26 +1,34 @@
-import { useState, useContext } from "react";
+import { useState, useEffect } from "react";
 import "../Hero/Hero.css";
 import { HiOutlineChevronRight } from "react-icons/hi";
 import { useNavigate } from "react-router-dom";
-import StateContext from '../../helpers/useContext'
+import { MdDirectionsTransit } from "react-icons/md";
 
 const Start = () => {
   const [email, setEmail] = useState("");
-  const { setEnteredEmail } = useContext(StateContext);
+  const [submitted, setSubmitted] = useState(false);
   const navigate = useNavigate();
 
   function handleChange(e) {
     setEmail(e.target.value);
   }
 
+  useEffect(() => {
+    console.log(email);
+    localStorage.setItem("enteredEmail", JSON.stringify(email));
+  }, [submitted]);
+
+  function directTo() {
+  }
+
   function handleSubmit(e) {
     e.preventDefault();
-    setEnteredEmail(email);
+    setSubmitted((prevSubmitted) => !prevSubmitted);
     navigate("/signup/password");
   }
 
   return (
-    <form className="flex w-full text-[#fff] start" onSubmit={handleSubmit}>
+    <form className="flex w-full text-[#fff] start" onSubmit={handleSubmit} >
       <input
         type="email"
         onChange={handleChange}
