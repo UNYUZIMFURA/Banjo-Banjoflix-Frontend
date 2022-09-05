@@ -1,10 +1,10 @@
-.single-movie:hover .play-btn{
-    opacity: 1;
-    transition: 0.2s ease-in-out;
+.single-movie:hover .play-btn {
+  opacity: 1;
+  transition: 0.2s ease-in-out;
 }
 
-.single-movie:hover img{
- opacity: 0.7;
+.single-movie:hover img {
+  opacity: 0.7;
 }
 
 .test {
@@ -65,6 +65,12 @@
   }
 }
 
+@media only screen and (max-width: 1240px) {
+  .vid-btns {
+    width: 30%;
+  }
+}
+
 @media only screen and (max-width: 1105px) {
   .watch-movie {
     width: 95%;
@@ -117,6 +123,12 @@
   }
 }
 
+@media only screen and (max-width: 635px) {
+  .vid-btns {
+    width: 40%;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .single-row {
     margin-left: 0;
@@ -145,5 +157,17 @@
 @media only screen and (max-width: 502px) {
   .rows-holder {
     top: 30%;
+  }
+}
+
+@media only screen and (max-width: 495px) {
+  .vid-btns {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .vid-btns {
+    width: 60%;
   }
 }
