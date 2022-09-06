@@ -6,10 +6,23 @@ import { FaPlay } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
 import { IoAddOutline } from "react-icons/io5";
 import { GiSpeaker, GiSpeakerOff } from "react-icons/gi";
+import YouTube from "react-youtube";
 
 const MovieBox = () => {
+  const opts = {
+    height: "390",
+    width: "100%",
+    playerVars: {
+      autoplay: 1,
+    },
+  };
+  const [likeState, setLikeState] = useState(false);
   const [hasSelected, setHasSeleted] = useRecoilState(movieSelected);
   const [soundState, setSoundState] = useState(true);
+
+  function toggleLike() {
+    setLikeState((prevLikeState) => !prevLikeState);
+  }
 
   function closeMovie() {
     setHasSeleted((prevSelected) => !prevSelected);
@@ -23,13 +36,19 @@ const MovieBox = () => {
         <div className="h-full w-[26%] flex items-center justify-around ml-[2rem] vid-btns">
           <button className="h-[52%] w-[50%] flex items-center justify-center rounded-[4px] bg-[#e5e7eb]">
             <span>
-              <FaPlay size={20} />
+              <FaPlay
+                style={{
+                  cursor: "pointer",
+                }}
+                size={20}
+              />
             </span>
             <h3 className="ml-[0.6rem]">Play</h3>
           </button>
           <div className="min-h-[2.5rem] min-w-[2.5rem] flex items-center justify-center border-[1px] rounded-full">
             <IoAddOutline
               style={{
+                cursor: "pointer",
                 color: "white",
               }}
               size={25}
@@ -38,9 +57,12 @@ const MovieBox = () => {
           <div className="min-h-[2.5rem] min-w-[2.5rem] flex items-center justify-center border-[1px] rounded-full">
             <BiLike
               style={{
+                cursor: "pointer",
                 color: "white",
               }}
               size={22}
+              onClick={toggleLike}
+              fill={likeState ? "#0071eb" : "#fff"}
             />
           </div>
         </div>

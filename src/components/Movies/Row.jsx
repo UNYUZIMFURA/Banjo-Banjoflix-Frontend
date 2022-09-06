@@ -56,6 +56,7 @@ const Row = (props) => {
                 className="w-full h-full rounded-[4px] object-cover cursor-pointer movie-img"
               />
               {/* <img
+                id={movie.id}
                 src={`${base_url}${movie.poster_path}`}
                 alt={movie.name}
                 className="h-full w-full rounded-[4px] object-cover movie-img"
