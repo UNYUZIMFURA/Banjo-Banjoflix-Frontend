@@ -1,12 +1,18 @@
 import "./Movies.css";
+import { useState } from "react";
 import { useRecoilState } from "recoil";
 import { movieSelected } from "../../atoms";
-import {} from "react-icons/fa";
+import { BiLike } from "react-icons/bi";
+import { FaPlay } from "react-icons/fa";
+import { AiOutlineClose } from "react-icons/ai";
+import { IoAddOutline } from "react-icons/io5";
+import { GiSpeaker, GiSpeakerOff } from "react-icons/gi";
 import requests from "./Fetch";
 import Row from "./Row";
 import NavBar from "./NavBar";
 
 const Movies = () => {
+  const [soundState, setSoundState] = useState(true);
   const [hasSelected] = useRecoilState(movieSelected);
   console.log(hasSelected);
   return (
@@ -16,17 +22,59 @@ const Movies = () => {
         {hasSelected ? (
           <div className="h-screen w-full fixed z-10 test">
             <div className="h-[88vh] w-[48%] flex flex-col fixed top-[4%] left-[25%] rounded-t-[5px] watch-movie">
-              <div className="absolute top-[2%] right-[2%] min-h-[2.3rem] min-w-[2.3rem] bg-[#000] rounded-full cursor-pointer z-40 close-btn"></div>
-              <div className="h-[10%] bg-[gray] w-full flex items-center justify-between absolute top-[50%] left-0 z-40">
+              <div className="flex items-center justify-center absolute top-[2%] right-[2%] min-h-[2.3rem] min-w-[2.3rem] bg-[#000] rounded-full cursor-pointer z-40 close-btn">
+                <AiOutlineClose fill="white" size={20} />
+              </div>
+              <div className="h-[10%] bg-[rgb(31, 31, 31)] w-full flex items-center justify-between absolute top-[52%] left-0 z-40">
                 <div className="h-full w-[26%] bg-[yellow] flex items-center justify-around ml-[1rem] vid-btns">
                   <button className="h-[52%] w-[50%] flex items-center justify-center rounded-[4px] bg-[red]">
-                    <span></span>
+                    <span>
+                      <FaPlay size={20} />
+                    </span>
                     <h3 className="ml-[0.6rem]">Play</h3>
                   </button>
-                  <div className="flex items-center justify-center min-h-[2.5rem] min-w-[2.5rem] border-[1px] rounded-full"></div>
-                  <div className="flex items-center justify-center min-h-[2.5rem] min-w-[2.5rem] border-[1px] rounded-full"></div>
+                  <div className="min-h-[2.5rem] min-w-[2.5rem] flex items-center justify-center border-[1px] rounded-full">
+                    <IoAddOutline
+                      style={{
+                        color: "white",
+                      }}
+                      size={25}
+                    />
+                  </div>
+                  <div className="min-h-[2.5rem] min-w-[2.5rem] flex items-center justify-center border-[1px] rounded-full">
+                    <BiLike
+                      style={{
+                        color: "white",
+                      }}
+                      size={22}
+                    />
+                  </div>
                 </div>
-                <div className="flex items-center justify-center min-h-[2.5rem] min-w-[2.5rem] border-[1px] rounded-full mr-[1rem]"></div>
+                <div className="min-h-[2.5rem] min-w-[2.5rem] flex items-center justify-center border-[1px] rounded-full mr-[1rem]">
+                  {soundState ? (
+                    <GiSpeaker
+                      style={{
+                        cursor: "pointer",
+                        color: "white",
+                      }}
+                      size={28}
+                      onClick={() => {
+                        setSoundState((prevSoundState) => !prevSoundState);
+                      }}
+                    />
+                  ) : (
+                    <GiSpeakerOff
+                      style={{
+                        cursor:"pointer",
+                        color: "white",
+                      }}
+                      size={28}
+                      onClick={() => {
+                        setSoundState((prevSoundState) => !prevSoundState);
+                      }}
+                    />
+                  )}
+                </div>
               </div>
               <div className="h-[65%] w-full z-30 rounded-t-[5px] bg-[red]"></div>
               <div className="h-[30%] w-full flex flex-col items-center justify-around movie-desc">
