@@ -22,8 +22,7 @@ const Question = (props) => {
     setCount((prevCount) => prevCount + 1);
     if (count % 2 === 0) {
       question.style.marginBottom = "0.55rem";
-    }
-    else if(count % 2 !== 0) {
+    } else if (count % 2 !== 0) {
       question.style.marginBottom = 0;
     }
   }

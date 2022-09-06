@@ -8,7 +8,7 @@ import { FiPlay } from "react-icons/fi";
 
 const base_url = "https://image.tmdb.org/t/p/original/";
 const Row = (props) => {
-  const [isSelected,setIsSelected] = useRecoilState(movieSelected)
+  const [isSelected, setIsSelected] = useRecoilState(movieSelected);
   // const [movies, setMovies] = useState([])
   const [movies, setMovies] = useState([
     { name: "kevin" },
