@@ -19,7 +19,6 @@
   background-image: url("../../images/kids.png");
   background-size: 100%;
   background-repeat: no-repeat;
-  background-color: brown;
 }
 
 .rows-holder {
@@ -35,6 +34,22 @@
 .movie-holder::-webkit-scrollbar {
   width: 0;
   height: 0;
+}
+
+@media only screen and (max-width: 1799px) {
+  .movie-title {
+    width: 100%;
+  }
+
+  .movie-descr {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 1605px) {
+  .movie-descr {
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 1700px) {
@@ -65,6 +80,18 @@
   }
 }
 
+@media only screen and (max-width: 1424px) {
+  .movbtns-holder {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 1265px) {
+  .randesc-holder {
+    width: 60%;
+  }
+}
+
 @media only screen and (max-width: 1240px) {
   .vid-btns {
     width: 30%;
@@ -90,6 +117,12 @@
   }
 }
 
+@media only screen and (max-width: 1063px) {
+  .randesc-holder {
+    width: 70%;
+  }
+}
+
 @media only screen and (max-width: 962px) {
   .rows-holder {
     top: 70%;
@@ -105,9 +138,34 @@
   }
 }
 
+@media only screen and (max-width: 907px) {
+  .randesc-holder {
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 781px) {
+  .randesc-holder {
+    margin-top: 0;
+    margin-bottom: 25%;
+  }
+}
+
 @media only screen and (max-width: 780px) {
   .rows-holder {
     top: 60%;
+  }
+}
+
+@media only screen and (max-width: 745px) {
+  .randesc-holder {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 671px) {
+  .randesc-holder {
+    margin-bottom: 35%;
   }
 }
 
@@ -123,9 +181,29 @@
   }
 }
 
+@media only screen and (max-width: 655px) {
+  .randesc-holder {
+    margin-bottom: 50%;
+  }
+}
 @media only screen and (max-width: 635px) {
   .vid-btns {
     width: 40%;
+  }
+}
+
+@media only screen and (max-width: 605px) {
+  .randesc-holder {
+    height: 25%;
+    margin-bottom: 70%;
+  }
+
+  .movie-title {
+    font-size: 2.3rem;
+  }
+
+  .movie-descr {
+    font-size: 0.9rem;
   }
 }
 
@@ -155,6 +233,13 @@
 }
 
 @media only screen and (max-width: 502px) {
+  .randesc-holder {
+    position: fixed;
+    top: 8%;
+    height: 20%;
+    /* margin-bottom: 100%; */
+  }
+
   .rows-holder {
     top: 30%;
   }
@@ -166,8 +251,33 @@
   }
 }
 
+@media only screen and (max-width: 452px) {
+  .movie-title {
+    font-size: 1.4rem;
+  }
+
+  .movie-descr {
+    font-size: 1rem;
+  }
+
+  .movbtns-holder button {
+    height: 70%;
+  }
+}
+
 @media only screen and (max-width: 400px) {
+  .movbtns-holder {
+    width: 80%;
+  }
+
   .vid-btns {
     width: 60%;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .randesc-holder {
+    top: 5%;
+    height: 22%;
   }
 }

@@ -1,6 +1,7 @@
 import "./Movies.css";
 import { useRecoilState } from "recoil";
 import { movieSelected } from "../../atoms";
+import RandomMov from "./RandomMov";
 import MovieBox from "./MovieBox";
 import requests from "./Fetch";
 import Row from "./Row";
@@ -11,8 +12,9 @@ const Movies = () => {
 
   return (
     <div className="flex flex-col justify-around relative">
-      <div className="h-screen trending-holder">
+      <div className="h-screen flex items-center justify-start trending-holder">
         <NavBar />
+        <RandomMov />
         {hasSelected ? (
           <div className="h-screen w-full fixed z-10 test">
             <MovieBox />

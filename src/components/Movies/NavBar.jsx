@@ -6,7 +6,7 @@ import AccountImg from "../../images/account.png";
 
 const NavBar = () => {
   return (
-    <div className="h-[10%] w-full fixed text-[#fff] flex items-center justify-between z-10 nav">
+    <div className="h-[10%] w-full fixed top-0 text-[#fff] flex items-center justify-between z-10 nav">
       <div className="w-[48%]  flex justify-between items-center ml-[3%] genres-holder">
         <a href="/">
           <h1 className="text-3xl text-[#e50914] font-bold cursor-pointer logo">
