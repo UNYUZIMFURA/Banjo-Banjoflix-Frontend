@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import Footer2 from "../CodeReduction/Footer2";
 import Header from "../CodeReduction/Header";
 import PlanDetails from "./PlanDetails";
@@ -5,6 +6,7 @@ import CheckMark from "../../images/checkmark.png";
 import "./ChoosePlan.css";
 
 const ChoosePlan = () => {
+  const navigate = useNavigate();
   return (
     <div className="h-screen flex flex-col justify-between">
       <div className="h-[70vh] w-full flex flex-col items-center justify-between">
@@ -36,7 +38,10 @@ const ChoosePlan = () => {
             bigMargin="0"
             mb="0.6rem"
           />
-          <button className="h-[4rem] w-[92%]  text-[1.2rem] text-[#fff] rounded-[3px] bg-[#e50914] mt-[1.5rem]">
+          <button
+            className="h-[4rem] w-[92%]  text-[1.2rem] text-[#fff] rounded-[3px] bg-[#e50914] mt-[1.5rem]"
+            onClick={() => navigate("/signup/planform")}
+          >
             Next
           </button>
         </div>

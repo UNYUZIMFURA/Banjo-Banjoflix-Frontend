@@ -25,11 +25,11 @@ const MovieBox = () => {
   }
 
   function closeMovie() {
-    setHasSeleted((prevSelected) => !prevSelected);
+    setHasSeleted(false);
   }
   return (
     <div className="h-[88vh] w-[48%] flex flex-col fixed top-[4%] left-[25%] rounded-t-[5px] watch-movie">
-      <div className="flex items-center justify-center absolute top-[2%] right-[2%] min-h-[2.3rem] min-w-[2.3rem] bg-[#000] rounded-full cursor-pointer z-40 close-btn">
+      <div className="flex items-center justify-center absolute top-[2%] right-[2%] min-h-[2.3rem] min-w-[2.3rem] bg-[#000] rounded-full cursor-pointer z-40 close-btn" onClick={closeMovie}>
         <AiOutlineClose fill="white" size={20} onClick={closeMovie} />
       </div>
       <div className="h-[10%] bg-[rgb(31, 31, 31)] w-full flex items-center justify-between absolute top-[52%] left-0 z-40">

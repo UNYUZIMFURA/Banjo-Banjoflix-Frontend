@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import "./Login.css";
 
 const Login = () => {
+  const [message, setMessage] = useState("")
   const [submitTriggered, setSubmitTriggered] = useState(false);
   const [formData, setFormData] = useState({
     emailLogin: "",
@@ -11,6 +12,7 @@ const Login = () => {
   function handleSubmit(e) {
     e.preventDefault();
     setSubmitTriggered((prevTriggered) => !prevTriggered);
+    console.log(message)
   }
 
   function handleChange(e) {
@@ -25,6 +27,7 @@ const Login = () => {
 
   useEffect(() => {
     function fetchData() {
+      console.log({formData})
       fetch("http://localhost:3020/login", {
         headers: {
           "Content-Type": "application/json",
@@ -36,7 +39,7 @@ const Login = () => {
         }),
       })
         .then((res) => res.json())
-        .then((data) => console.log(data));
+        .then((data) => console.log(data.message));
     }
     fetchData();
   }, [submitTriggered]);
@@ -69,8 +72,8 @@ const Login = () => {
                 placeholder="Email"
                 value={formData.emailLogin}
               />
-              <h3 className="text-[orange] mr-[52%] mb-[0.6rem] hidden">
-                Enter a valid Email
+              <h3 className="text-[orange] mr-[43%] mb-[0.6rem] hidden" id="emailError">
+                
               </h3>
               <input
                 onChange={handleChange}
@@ -80,8 +83,8 @@ const Login = () => {
                 placeholder="Password"
                 value={formData.passwordLogin}
               />
-              <h3 className="text-[orange] ml-[2rem] mt-[2px] hidden">
-                Your password must contain between 4 and 60 characters.
+              <h3 className="text-[orange] ml-[2rem] mt-[2px] hidden" id="passError">
+                
               </h3>
             </div>
             <div className="flex flex-col items-center justify-around w-full h-[38%]">

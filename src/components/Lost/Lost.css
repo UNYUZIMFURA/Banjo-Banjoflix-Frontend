@@ -1,0 +1,121 @@
+.lost-all-holder {
+  background-color: rgb(14, 13, 13);
+}
+
+.lost-holder {
+  background-color: rgb(14, 13, 13);
+}
+
+.from-txt {
+  background-color: rgb(17, 16, 16);
+}
+
+@media only screen and (max-width: 1655px) {
+  .code-txt {
+    width: 25%;
+  }
+}
+
+@media only screen and (max-width: 1525px) {
+  .code-txt h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 1250px) {
+  .code-txt {
+    width: 20%;
+  }
+}
+
+@media only screen and (max-width: 1155px) {
+  .code-txt {
+    width: 25%;
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  .code-txt {
+    width: 30%;
+  }
+}
+
+@media only screen and (max-width: 912px) {
+  .code-txt {
+    width: 30%;
+  }
+}
+
+@media only screen and (max-width: 817px) {
+  .lost-txt {
+    font-size: 3rem;
+  }
+
+  .lost-para {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .code-txt {
+    width: 35%;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 655px) {
+  .code-txt {
+    width: 45%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .from-txt {
+    justify-content: center;
+  }
+
+  .from-txt h2 {
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .code-txt {
+    width: 50%;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 463px) {
+  .lost-txt {
+    font-size: 2.5rem;
+  }
+
+  .lost-para {
+    font-size: 1rem;
+  }
+
+  .code-txt {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 411px) {
+  .lost-para {
+    margin-left: 2rem;
+  }
+}
+
+@media only screen and (max-width: 337px) {
+  .lost-para {
+    margin: 0;
+  }
+
+  .code-txt {
+    justify-content: center;
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+}

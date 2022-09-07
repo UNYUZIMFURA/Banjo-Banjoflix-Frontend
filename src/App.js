@@ -10,6 +10,7 @@ import ChoosePlan from "./components/ChoosePlan/ChoosePlan";
 import PlanForm from "./components/PlanForm/PlanForm";
 import SignReg from "./components/SignReg/SignReg";
 import Movies from "./components/Movies/Movies";
+import Lost from "./components/Lost/Lost";
 
 const App = () => {
   return (
@@ -26,7 +27,7 @@ const App = () => {
             <Route path="/signup" element={<ChoosePlan />} />
             <Route path="/signup/planform" element={<PlanForm />} />
             <Route path="/signup/registration" element={<SignReg />} />
-            <Route path="*" element={<HomePage />} />
+            <Route path="*" element={<Lost/>} />
           </Routes>
         </BrowserRouter>
     </div>
