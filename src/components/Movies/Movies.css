@@ -182,10 +182,19 @@
 }
 
 @media only screen and (max-width: 655px) {
+  .movie-title {
+    font-size: 1.5rem;
+  }
+
+  .movie-descr {
+    font-size: 1rem;
+  }
+  
   .randesc-holder {
     margin-bottom: 50%;
   }
 }
+
 @media only screen and (max-width: 635px) {
   .vid-btns {
     width: 40%;
@@ -237,7 +246,6 @@
     position: fixed;
     top: 8%;
     height: 20%;
-    /* margin-bottom: 100%; */
   }
 
   .rows-holder {

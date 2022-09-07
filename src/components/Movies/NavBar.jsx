@@ -13,7 +13,7 @@ const NavBar = () => {
             BANJOFLIX
           </h1>
         </a>
-        <div className="w-[80%] h-full flex justify-around items-center">
+        <div className="w-[80%] h-full flex justify-around items-center cursor-pointer">
           <h3 className="">Home</h3>
           <h3 className="">TV Shows</h3>
           <h3 className="">Movies</h3>
@@ -22,12 +22,12 @@ const NavBar = () => {
           <h3 className="">Browse by Languages</h3>
         </div>
       </div>
-      <div className="w-[15%] h-1/2  flex justify-between items-center mr-[3%] selection-types">
+      <div className="w-[15%] h-1/2  flex justify-between items-center mr-[3%] cursor-pointer selection-types">
         <FiSearch />
         <h3>Kids</h3>
         <h3>DVD</h3>
         <FiBell />
-        <div className="h-full w-[27%] flex items-center justify-around ">
+        <div className="h-full w-[27%] flex items-center justify-around cursor-pointer">
           <div className="h-[67%] w-[46%] rounded-[3px]">
             <img
               src={AccountImg}
