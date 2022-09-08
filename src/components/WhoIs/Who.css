@@ -1,6 +1,25 @@
+@media only screen and (max-width: 1575px) {
+  .who-img-holder {
+    height: 80%;
+    width: 8%;
+  }
+}
+
+@media only screen and (max-width: 1271px) {
+.who-img-holder {
+  width: 10%
+}
+}
+
 @media only screen and (max-width: 1100px) {
   .who-img-holder {
     width: 10%;
+  }
+}
+
+@media only screen and (max-width: 1017px) {
+  .who-img-holder {
+    width: 12%
   }
 }
 
@@ -12,12 +31,18 @@
 
 @media only screen and (max-width: 610px) {
   .who-img-holder {
-    width: 18%;
+    width: 20%;
   }
 }
 
 @media only screen and (max-width: 450px) {
   .who-img-holder {
     width: 25%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .who-img-holder {
+    width: 35%
   }
 }

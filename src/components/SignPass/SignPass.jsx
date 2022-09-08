@@ -53,7 +53,7 @@ const SignPass = () => {
               ></input>
 
               <h3 className="text-[#0071eb]">Forgot your password?</h3>
-              <button className="w-[90%] h-[3.5rem] bg-[red]  rounded-[3px] text-[#fff]  cursor-pointer" onClick={() => navigate('/signup/planform')}>
+              <button className="w-[90%] h-[3.5rem] bg-[red]  rounded-[3px] text-[#fff]  cursor-pointer" onClick={() => navigate('/signup')}>
                 Next
               </button>
             </form>

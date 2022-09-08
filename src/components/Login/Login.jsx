@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Login.css";
 
 const Login = () => {
-  const [message, setMessage] = useState("")
+  const navigate = useNavigate();
+  const [message, setMessage] = useState("");
   const [submitTriggered, setSubmitTriggered] = useState(false);
   const [formData, setFormData] = useState({
     emailLogin: "",
@@ -12,7 +14,6 @@ const Login = () => {
   function handleSubmit(e) {
     e.preventDefault();
     setSubmitTriggered((prevTriggered) => !prevTriggered);
-    console.log(message)
   }
 
   function handleChange(e) {
@@ -26,8 +27,14 @@ const Login = () => {
   }
 
   useEffect(() => {
+    function setError(errorMessage) {
+      const passError = document.getElementById("passError");
+      passError.style.display = "block";
+      passError.textContent = errorMessage;
+    }
+
     function fetchData() {
-      console.log({formData})
+      console.log({ formData });
       fetch("http://localhost:3020/login", {
         headers: {
           "Content-Type": "application/json",
@@ -39,7 +46,9 @@ const Login = () => {
         }),
       })
         .then((res) => res.json())
-        .then((data) => console.log(data.message));
+        .then((data) =>
+          data.message == "Ok" ? navigate("/who") : setError(data.message)
+        );
     }
     fetchData();
   }, [submitTriggered]);
@@ -54,7 +63,11 @@ const Login = () => {
         </a>
       </div>
       <div className="h-[70vh] w-[24.5%] flex flex-col items-center justify-evenly bg-[rgba(0,0,0,.75)] mb-[7rem] sign-form">
-        <div className=" h-[50%] w-full flex flex-col justify-between">
+        <h3
+          className="text-[orange] hidden"
+          id="passError"
+        ></h3>
+        <div className="h-[50%] w-full flex flex-col justify-between">
           <h2 className="text-[#fff] text-[2rem] font-bold ml-[4.5rem]">
             Sign In
           </h2>
@@ -72,9 +85,6 @@ const Login = () => {
                 placeholder="Email"
                 value={formData.emailLogin}
               />
-              <h3 className="text-[orange] mr-[43%] mb-[0.6rem] hidden" id="emailError">
-                
-              </h3>
               <input
                 onChange={handleChange}
                 type="password"
@@ -83,9 +93,6 @@ const Login = () => {
                 placeholder="Password"
                 value={formData.passwordLogin}
               />
-              <h3 className="text-[orange] ml-[2rem] mt-[2px] hidden" id="passError">
-                
-              </h3>
             </div>
             <div className="flex flex-col items-center justify-around w-full h-[38%]">
               <button className="w-[70%] h-[3rem] rounded-[3px] text-[#fff] font-medium bg-[#e50914]">

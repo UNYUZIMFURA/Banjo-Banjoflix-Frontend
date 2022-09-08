@@ -22,8 +22,8 @@ const WhoIs = () => {
                 alt=""
                 className="w-full h-[75%] object-cover rounded-[3px] cursor-pointer"
               />
-              <h2 className="text-[1.2rem] text-[#fff] text-center font-[300]">
-                Kevin
+              <h2 className="w-full text-[1.2rem] text-[#fff] text-center font-[300]">
+                Click Image!
               </h2>
             </div>
           </div>

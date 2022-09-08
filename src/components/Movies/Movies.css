@@ -7,6 +7,10 @@
   opacity: 0.7;
 }
 
+.movie-title {
+  text-transform: uppercase;
+}
+
 .test {
   background-color: rgba(0, 0, 0, 0.5);
 }
@@ -22,7 +26,7 @@
 }
 
 .rows-holder {
-  background-color: rgb(20, 20, 20);
+  background-color: rgb(39, 39, 39);
 }
 
 .movie-holder {
