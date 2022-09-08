@@ -1,4 +1,4 @@
-import { useState, createContext } from "react";
+import { useState } from "react";
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Protect from "./utils/Protect";
@@ -27,7 +27,7 @@ const App = () => {
             <Route path="/signup" element={<ChoosePlan />} />
             <Route path="/signup/planform" element={<PlanForm />} />
             <Route path="/signup/registration" element={<SignReg />} />
-            <Route path="*" element={<Lost/>} />
+            <Route path="*" element={<Lost />} />
           </Routes>
         </BrowserRouter>
     </div>

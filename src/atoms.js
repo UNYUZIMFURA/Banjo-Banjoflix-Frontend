@@ -9,5 +9,10 @@ export const activeNow = atom({
 
 export const movieSelected = atom({
   key: "movieSelected",
-  default: false
-})
+  default: false,
+});
+
+export const emailEntered = atom({
+  key: "emailEntered",
+  default: "",
+});

@@ -19,7 +19,7 @@
 
 @media only screen and (max-width: 600px) {
   .main-signup {
-    height: 80vh;
+    height: 100vh;
     width: 100%;
     margin: 0 auto;
   }

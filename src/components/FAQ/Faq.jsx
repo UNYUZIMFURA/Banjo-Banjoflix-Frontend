@@ -1,13 +1,22 @@
 import "./Faq.css";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { useRecoilState } from "recoil";
+import { emailEntered } from "../../atoms";
 import Question from "./Question";
 import Question2 from "./Question2";
 
 
 const Faq = () => {
-  const navigate = useNavigate
+  const navigate = useNavigate()
+  const [faqEmail, setFaqEmail] = useRecoilState(emailEntered)
   const [email2, setEmail2] = useState("");
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    setFaqEmail(email2);
+    navigate("/signup/password");
+  }
 
   function handleChange(e) {
     setEmail2(e.target.value);
@@ -69,8 +78,9 @@ const Faq = () => {
         <h3 className="text-[1.2rem] text-center text-[#fff] mt-[1rem] email-descr">
           Ready to watch? Enter your email to create or restart your membership.
         </h3>
-        <form className="h-[75%] w-full flex items-center justify-center text-[#fff] real-form">
+        <form className="h-[75%] w-full flex items-center justify-center text-[#fff] real-form" onSubmit={handleSubmit}>
           <input
+            type="email"
             onChange={handleChange}
             className="h-[62%] w-[66%] text-[#000] placeholder:text-[#8c8c8c] border-[1px] border-[#8c8c8c] indent-2 outline-none"
             placeholder="Email address"

@@ -22,7 +22,7 @@ const ChoosePlan = () => {
             </div>
             <div className="h-[50%] w-full flex flex-col items-center justify-around">
               <h3 className="text-[0.9rem] text-[#737373]">
-                STEP <span className="text-[#737373] font-semibold">1</span> OF
+                STEP <span className="text-[#737373] font-semibold">2</span> OF
                 <span className="text-[#737373] font-semibold"> 3</span>
               </h3>
               <h2 className="text-[1.8rem] font-medium">Choose your plan.</h2>

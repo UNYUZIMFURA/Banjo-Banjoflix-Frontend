@@ -15,7 +15,7 @@ const PlanForm = () => {
         <div className="h-[108vh] w-full flex flex-col justify-between items-center big-holder">
           <div className="h-[18vh] w-[45%] flex flex-col justify-between descr-holder">
             <h3 className="text-[0.9rem]">
-              STEP <span className="text-[#737373] font-medium">1</span> OF
+              STEP <span className="text-[#737373] font-medium">3</span> OF
               <span className="text-[#737373] font-medium"> 3</span>
             </h3>
             <h2 className="text-[2rem] font-medium">

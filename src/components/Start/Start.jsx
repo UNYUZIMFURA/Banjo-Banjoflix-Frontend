@@ -1,31 +1,27 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "../Hero/Hero.css";
+import { useRecoilState } from "recoil";
+import { emailEntered } from "../../atoms";
 import { HiOutlineChevronRight } from "react-icons/hi";
 import { useNavigate } from "react-router-dom";
-import { MdDirectionsTransit } from "react-icons/md";
 
 const Start = () => {
+  const [homeEmail, setHomeEmail] = useRecoilState(emailEntered);
   const [email, setEmail] = useState("");
-  const [submitted, setSubmitted] = useState(false);
   const navigate = useNavigate();
 
   function handleChange(e) {
     setEmail(e.target.value);
   }
 
-  useEffect(() => {
-    console.log(email);
-    window.localStorage.setItem("enteredEmail", JSON.stringify(email));
-  }, [submitted]);
-
   function handleSubmit(e) {
     e.preventDefault();
-    setSubmitted((prevSubmitted) => !prevSubmitted);
+    setHomeEmail(email);
     navigate("/signup/password");
   }
 
   return (
-    <form className="flex w-full text-[#fff] start" onSubmit={handleSubmit} >
+    <form className="flex w-full text-[#fff] start" onSubmit={handleSubmit}>
       <input
         type="email"
         onChange={handleChange}

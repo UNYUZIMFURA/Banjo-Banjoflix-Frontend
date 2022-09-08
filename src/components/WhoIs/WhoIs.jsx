@@ -8,8 +8,8 @@ const WhoIs = () => {
   return (
     <div className="h-screen flex flex-col bg-[#000]">
       <div className="h-[60%] flex flex-col justify-between">
-        <div className="h-[15%] w-[20%] flex items-center justify-center ">
-          <h1 className="text-4xl text-[#e50914] font-bold">BANJOFLIX</h1>
+        <div className="h-[15%] w-[20%] flex items-center justify-center">
+          <h1 className="text-4xl text-[#e50914] font-bold cursor-pointer" onClick={() => navigate('/')}>BANJOFLIX</h1>
         </div>
         <div className="h-[60%] flex flex-col justify-between">
           <h1 className="text-[2.5rem] text-center text-[#fff]">
