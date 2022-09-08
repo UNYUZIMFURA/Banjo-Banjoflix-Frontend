@@ -68,7 +68,7 @@ const SignPass = () => {
             <div className="h-[20%]flex flex-col justify-around">
               <h3 className="text-[#333]">Email</h3>
               <h3 className="text-[#333] font-medium text-[1rem]">
-                {emailSubmit}
+                {emailSubmit || <h3 className="text-[#e50914] text-[1rem] font-medium">Provide an Email !</h3>}
               </h3>
             </div>
             <form
@@ -89,7 +89,7 @@ const SignPass = () => {
               >
                 Re-Enter Email ?
               </h3>
-              <button className="w-[90%] h-[3.5rem] bg-[red]  rounded-[3px] text-[#fff]  cursor-pointer">
+              <button className="w-[90%] h-[3.5rem] bg-[#e50914]  rounded-[3px] text-[#fff]  cursor-pointer">
                 Next
               </button>
             </form>

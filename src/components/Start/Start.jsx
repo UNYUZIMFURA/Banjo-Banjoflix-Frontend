@@ -16,7 +16,7 @@ const Start = () => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    setHomeEmail(email);
+    setHomeEmail(email)
     navigate("/signup/password");
   }
 
