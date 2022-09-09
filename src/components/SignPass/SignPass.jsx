@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import { useRecoilState } from "recoil";
-import { emailEntered } from "../../atoms";
+import { emailEntered, hasToken } from "../../atoms";
 import "./SignPass.css";
 import Footer2 from "../CodeReduction/Footer2";
 import Header from "../CodeReduction/Header";
 import { useNavigate } from "react-router-dom";
 
 const SignPass = () => {
+  const [giveAccess, setGiveAccess] = useRecoilState(hasToken)
   const [submitTriggered2, setSubmitTriggered2] = useState(false);
   const [emailSubmit, setEmailSubmit] = useRecoilState(emailEntered);
   const navigate = useNavigate();
@@ -22,6 +23,11 @@ const SignPass = () => {
   }
 
   useEffect(() => {
+    function giveUserAccess() {
+      setGiveAccess(true)
+      navigate("/signup")
+    }
+
     function setError(errorMessage) {
       const signError = document.getElementById("signError");
       signError.style.display = "block";
@@ -41,7 +47,7 @@ const SignPass = () => {
       })
         .then((res) => res.json())
         .then((data) =>
-          data.message == "Ok" ? navigate("/signup") : setError(data.message)
+          data.message == "Ok" ? giveUserAccess() : setError(data.message)
         );
     }
     fetchData();

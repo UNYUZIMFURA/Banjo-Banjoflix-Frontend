@@ -1,8 +1,11 @@
 import { useState, useEffect } from "react";
+import { useRecoilState } from "recoil";
+import { hasToken } from "../../atoms";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
 
 const Login = () => {
+  const [movieAccess, setMovieAccess] = useRecoilState(hasToken)
   const navigate = useNavigate();
   const [message, setMessage] = useState("");
   const [submitTriggered, setSubmitTriggered] = useState(false);
@@ -27,6 +30,11 @@ const Login = () => {
   }
 
   useEffect(() => {
+    function giveUserAccess() {
+      setMovieAccess(true)
+      navigate("/who")
+    }
+
     function setError(errorMessage) {
       const passError = document.getElementById("passError");
       passError.style.display = "block";
@@ -47,7 +55,7 @@ const Login = () => {
       })
         .then((res) => res.json())
         .then((data) =>
-          data.message == "Ok" ? navigate("/who") : setError(data.message)
+          data.message == "Ok" ? giveUserAccess() : setError(data.message)
         );
     }
     fetchData();
