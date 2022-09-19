@@ -26,3 +26,28 @@ export const emailEntered = atom({
   key: "emailEntered",
   default: "",
 });
+
+export const release_date = atom({
+  key: "release_date",
+  default: ""
+})
+
+export const genres = atom({
+  key: "genres",
+  default: ""
+})
+
+export const originalLanguage = atom({
+  key: "originalLanguage",
+  default: ""
+})
+
+export const vote_average = atom({
+  key: "vote_average",
+  default: ""
+})
+
+export const vote_count = atom({
+  key: "vote_account",
+  default: ""
+})

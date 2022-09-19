@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useRecoilState } from "recoil";
-import { movieSelected, currentMov } from "../../atoms";
+import { movieSelected, currentMov, release_date, genres, originalLanguage, vote_average, vote_count } from "../../atoms";
 import { BiLike } from "react-icons/bi";
 import { FaPlay } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
@@ -20,6 +20,11 @@ const MovieBox = () => {
   const [likeState, setLikeState] = useState(false);
   const [hasSelected, setHasSeleted] = useRecoilState(movieSelected);
   const [soundState, setSoundState] = useState(true);
+  const [movieDate, setMovieDate] = useRecoilState(release_date)
+  const [movieGenres, setMovieGenres] = useRecoilState(genres)
+  const [movieLang, setMovieLang] = useRecoilState(originalLanguage)
+  const [movieVoteAvg, setMovieVoteAvg] = useRecoilState(vote_average)
+  const [movieVoteCount, setMovieVoteAccount] = useRecoilState(vote_count)
 
   function toggleLike() {
     setLikeState((prevLikeState) => !prevLikeState);
@@ -97,7 +102,7 @@ const MovieBox = () => {
         </div>
       </div>
       <div className="h-[65%] w-full z-30 rounded-t-[5px] bg-[black]">
-        {watchMovie && <YouTube videoId={watchMovie} opts={opts} />}
+        {watchMovie && <YouTube videoId={watchMovie} opts={opts} className="w-full h-full"/>}
       </div>
       <div className="h-[30%] w-full flex flex-col items-center justify-around movie-desc">
         <div className="h-[70%] w-full flex items-center justify-evenly">

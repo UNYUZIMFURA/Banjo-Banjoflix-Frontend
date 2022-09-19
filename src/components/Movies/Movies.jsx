@@ -16,7 +16,7 @@ const Movies = () => {
         <NavBar />
         <RandomMov />
         {hasSelected ? (
-          <div className="h-screen w-full fixed z-10 test">
+          <div className="h-screen w-full fixed top-0 z-10 test">
             <MovieBox />
           </div>
         ) : null}
