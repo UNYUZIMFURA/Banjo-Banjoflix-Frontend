@@ -28,7 +28,7 @@ const Movies = () => {
           fetchUrl={requests.fetchNetflixOriginals}
           mtop="2.4rem"
         />
-        <Row title="Top Rated" fetchUrl={requests.fetchTopRated} mtop="2.4rem"/>
+        <Row title="Top Rated" fetchUrl={requests.fetchTopRated} mtop="2.4rem" />
         <Row title="Action Movies" fetchUrl={requests.fetchActionMovies} mtop="2.4rem" />
         <Row title="Comedy Movies" fetchUrl={requests.fetchComedyMovies} mtop="2.4rem" />
         <Row title="Horror Movies" fetchUrl={requests.fetchHorrorMovies} mtop="2.4rem" />

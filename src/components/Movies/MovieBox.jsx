@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useRecoilState } from "recoil";
-import { movieSelected } from "../../atoms";
+import { movieSelected, currentMov } from "../../atoms";
 import { BiLike } from "react-icons/bi";
 import { FaPlay } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
@@ -10,12 +10,13 @@ import YouTube from "react-youtube";
 
 const MovieBox = () => {
   const opts = {
-    height: "390",
+    height: "100%",
     width: "100%",
     playerVars: {
       autoplay: 1,
     },
   };
+  const [watchMovie, setWatchMovie] = useRecoilState(currentMov)
   const [likeState, setLikeState] = useState(false);
   const [hasSelected, setHasSeleted] = useRecoilState(movieSelected);
   const [soundState, setSoundState] = useState(true);
@@ -29,7 +30,10 @@ const MovieBox = () => {
   }
   return (
     <div className="h-[88vh] w-[48%] flex flex-col fixed top-[4%] left-[25%] rounded-t-[5px] watch-movie">
-      <div className="flex items-center justify-center absolute top-[2%] right-[2%] min-h-[2.3rem] min-w-[2.3rem] bg-[#000] rounded-full cursor-pointer z-40 close-btn" onClick={closeMovie}>
+      <div
+        className="flex items-center justify-center absolute top-[2%] right-[2%] min-h-[2.3rem] min-w-[2.3rem] bg-[#000] rounded-full cursor-pointer z-40 close-btn"
+        onClick={closeMovie}
+      >
         <AiOutlineClose fill="white" size={20} onClick={closeMovie} />
       </div>
       <div className="h-[10%] bg-[rgb(31, 31, 31)] w-full flex items-center justify-between absolute top-[52%] left-0 z-40">
@@ -92,7 +96,9 @@ const MovieBox = () => {
           )}
         </div>
       </div>
-      <div className="h-[65%] w-full z-30 rounded-t-[5px] bg-[black]"></div>
+      <div className="h-[65%] w-full z-30 rounded-t-[5px] bg-[black]">
+        {watchMovie && <YouTube videoId={watchMovie} opts={opts} />}
+      </div>
       <div className="h-[30%] w-full flex flex-col items-center justify-around movie-desc">
         <div className="h-[70%] w-full flex items-center justify-evenly">
           <div className="h-full w-[55%] flex flex-col justify-evenly">
@@ -122,7 +128,7 @@ const MovieBox = () => {
           </div>
         </div>
         <h1 className="text-[#737373]">
-          &copy; Banjo Ltd - 2022 In Association with TMDB
+          &copy; Banjo Inc - 2022 In Association with TMDB
         </h1>
       </div>
     </div>

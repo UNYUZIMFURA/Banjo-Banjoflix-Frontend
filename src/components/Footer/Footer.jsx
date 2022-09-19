@@ -37,7 +37,7 @@ const Footer = () => {
           four=""
         />
       </div>
-      <h1 className="text-[#737373]">&copy; Banjo Ltd - 2022</h1>
+      <h1 className="text-[#737373]">&copy; Banjo Inc - 2022</h1>
     </div>
   );
 };

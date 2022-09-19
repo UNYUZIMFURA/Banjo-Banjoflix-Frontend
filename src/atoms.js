@@ -7,6 +7,11 @@ key: "hasToken",
 default: false,
 })
 
+export const currentMov = atom({
+  key: "currentMov",
+  default: ""
+})
+
 export const activeNow = atom({
   key: "activeNow",
   default: 0,

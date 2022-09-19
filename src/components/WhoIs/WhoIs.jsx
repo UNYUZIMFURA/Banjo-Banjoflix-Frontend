@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import Stranger from "../../images/stranger.png";
+import Account from "../../images/avatar.png";
 import './Who.css'
 
 
@@ -18,9 +18,9 @@ const WhoIs = () => {
           <div className="h-[70%]  flex items-start justify-center">
             <div className="h-[67%] w-[6.5%] flex flex-col justify-between rounded-[3px] cursor-pointer who-img-holder" onClick={() => navigate("/browse")}>
               <img
-                src={Stranger}
+                src={Account}
                 alt=""
-                className="w-full h-[75%] object-cover rounded-[3px] cursor-pointer"
+                className="w-full h-[100%] object-cover rounded-[3px] cursor-pointer"
               />
               <h2 className="w-full text-[1.2rem] text-[#fff] text-center font-[300]">
                 Click Image!

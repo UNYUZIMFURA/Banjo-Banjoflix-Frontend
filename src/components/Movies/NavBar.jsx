@@ -2,7 +2,7 @@ import "./Movies.css";
 import { FiSearch } from "react-icons/fi";
 import { FiBell } from "react-icons/fi";
 import { FiArrowDown } from "react-icons/fi";
-import AccountImg from "../../images/account.png";
+import AccountImg from "../../images/avatar.png";
 
 const NavBar = () => {
   return (
