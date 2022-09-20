@@ -30,7 +30,7 @@ const RandomMov = () => {
           <h3 className="ml-[0.6rem]">Play</h3>
         </button>
         <button
-          className="h-[2.8rem] w-[51%] flex items-center justify-center rounded-[4px] bg-[#737373]"
+          className="h-[2.8rem] w-[51%] flex items-center justify-center rounded-[4px] bg-[rgba(128,128,128,0.7)]"
           onClick={() => setHasPlayed(true)}
         >
           <span>
@@ -39,7 +39,7 @@ const RandomMov = () => {
                 cursor: "pointer",
               }}
               size={20}
-              fill="red"
+              fill="white"
             />
           </span>
           <h3 className="ml-[0.6rem]">More Info</h3>

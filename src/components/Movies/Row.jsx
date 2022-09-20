@@ -29,7 +29,7 @@ const Row = (props) => {
   const [changeCount, setChangeCount] = useRecoilState(vote_count);
   const [changeTitle, setChangeTitle] = useRecoilState(title);
   const [movies, setMovies] = useState([]);
-  console.log("Rendering happened");
+
   useEffect(() => {
     async function fetchData() {
       const request = await axio.get(props.fetchUrl);

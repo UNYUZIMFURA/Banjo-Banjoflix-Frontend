@@ -27,15 +27,16 @@ const Movies = () => {
   const [changeOverview, setChangeOverview] = useRecoilState(randomOverview);
   const [randOverview, setRandOverview] = useRecoilState(overview);
   const [randDate, setRandDate] = useRecoilState(air_date);
-  const [randGenre, setRandGenre] = useRecoilState(genres);
   const [randLang, setRandLang] = useRecoilState(originalLanguage);
   const [randVotAvg, setRandVotAvg] = useRecoilState(vote_average);
   const [randCount, setRandCount] = useRecoilState(vote_count);
   const [randTitle, setRandTitle] = useRecoilState(title);
   const [randomMovie, setRandomMovie] = useState([]);
+
   useEffect(() => {
     async function fetchData() {
       const req = await axio.get(request.fetchNetflixOriginals);
+      // console.log(req.data);
       setRandomMovie(
         req.data.results[
           Math.floor(Math.random() * req.data.results.length - 1)
@@ -45,9 +46,24 @@ const Movies = () => {
         randomMovie?.title || randomMovie?.name || randomMovie?.original_name
       );
       setChangeOverview(randomMovie.overview);
+      return req;
     }
     fetchData();
   }, []);
+  // function setRandDetails() {
+  //   console.log("clickedinthe");
+  //   setRandOverview(randomMovie.overview);
+  //   setRandDate(randomMovie?.first_air_date || randomMovie?.release_date);
+  //   setRandLang(randomMovie.original_language);
+  //   setRandVotAvg(randomMovie.vote_average);
+  //   setRandCount(randomMovie.vote_count);
+  //   setRandTitle(
+  //     randomMovie?.name ||
+  //       randomMovie?.original_name ||
+  //       randomMovie?.name ||
+  //       randomMovie?.title
+  //   );
+  // }
 
   const [hasSelected, setHasSeleted] = useRecoilState(movieSelected);
 
