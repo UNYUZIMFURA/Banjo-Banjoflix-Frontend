@@ -1,8 +1,19 @@
+import { useState, useEffect } from "react";
 import { FaInfoCircle, FaPlay } from "react-icons/fa";
 import { useRecoilState } from "recoil";
 import { movieSelected } from "../../atoms";
+import axio from "../../axios";
+import request from "./Fetch";
 
 const RandomMov = () => {
+  const [randomMovie, setRandomMovie] = useState([]);
+  useEffect(() => {
+    async function fetchData() {
+      const req = await axio.get(request.fetchTrending);
+      setRandomMovie(req.data.results[Math.floor(Math.random() * req.data.results.length-1)])
+    }
+    fetchData();
+  }, []);
   const [hasPlayed, setHasPlayed] = useRecoilState(movieSelected);
   return (
     <div className="h-[35%] w-1/2 flex flex-col items-start justify-around  mt-[4%] ml-[3%] randesc-holder">
