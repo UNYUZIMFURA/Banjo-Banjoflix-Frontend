@@ -27,8 +27,18 @@ export const emailEntered = atom({
   default: "",
 });
 
-export const release_date = atom({
-  key: "release_date",
+export const title = atom({
+key: "title", 
+default: ""
+})
+
+export const overview = atom({
+  key: "overview",
+  default: ""
+})
+
+export const air_date = atom({
+  key: "air_date",
   default: ""
 })
 

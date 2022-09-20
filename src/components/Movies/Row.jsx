@@ -1,7 +1,17 @@
 import { useEffect, useState } from "react";
 import axio from "../../axios";
 import { useRecoilState } from "recoil";
-import { movieSelected, currentMov, release_date, genres, originalLanguage, vote_average, vote_count } from "../../atoms";
+import {
+  movieSelected,
+  currentMov,
+  air_date,
+  genres,
+  originalLanguage,
+  vote_average,
+  vote_count,
+  overview,
+  title,
+} from "../../atoms";
 import "./Movies.css";
 import { FiPlay } from "react-icons/fi";
 import movieTrailer from "movie-trailer";
@@ -11,6 +21,13 @@ const Row = (props) => {
   const [controlMoviePlay, setControlMoviePlay] = useState(false);
   const [trailerUrl, setTrailerUrl] = useRecoilState(currentMov);
   const [isSelected, setIsSelected] = useRecoilState(movieSelected);
+  const [changeOverview, setChangeOverview] = useRecoilState(overview);
+  const [changeDate, setChangeDate] = useRecoilState(air_date);
+  const [changeGenre, setChangeGenre] = useRecoilState(genres);
+  const [changeLang, setChangeLang] = useRecoilState(originalLanguage);
+  const [changeVotAvg, setChangeVotAvg] = useRecoilState(vote_average);
+  const [changeCount, setChangeCount] = useRecoilState(vote_count);
+  const [changeTitle, setChangeTitle] = useRecoilState(title);
   const [movies, setMovies] = useState([]);
   console.log("Rendering happened");
   useEffect(() => {
@@ -32,7 +49,12 @@ const Row = (props) => {
     if (trailerUrl) {
       setTrailerUrl("");
     } else {
-
+      setChangeTitle(mov.title || "")
+      setChangeOverview(mov.overview || "");
+      setChangeDate(mov.first_air_date || mov.release_date || "");
+      setChangeLang(mov.original_language || "");
+      setChangeVotAvg(mov.vote_average || "");
+      setChangeCount(mov.vote_count || "");
       movieTrailer(
         mov?.name ||
           mov?.title ||
