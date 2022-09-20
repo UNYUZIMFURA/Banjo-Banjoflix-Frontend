@@ -1,28 +1,18 @@
-import { useState, useEffect } from "react";
 import { FaInfoCircle, FaPlay } from "react-icons/fa";
 import { useRecoilState } from "recoil";
-import { movieSelected } from "../../atoms";
-import axio from "../../axios";
-import request from "./Fetch";
+import { movieSelected, randomTitle, randomOverview } from "../../atoms";
 
 const RandomMov = () => {
-  const [randomMovie, setRandomMovie] = useState([]);
-  useEffect(() => {
-    async function fetchData() {
-      const req = await axio.get(request.fetchTrending);
-      setRandomMovie(req.data.results[Math.floor(Math.random() * req.data.results.length-1)])
-    }
-    fetchData();
-  }, []);
+  const [randTitle, setRandTitle] = useRecoilState(randomTitle);
+  const [randOverview, setRandOverview] = useRecoilState(randomOverview);
   const [hasPlayed, setHasPlayed] = useRecoilState(movieSelected);
   return (
     <div className="h-[35%] w-1/2 flex flex-col items-start justify-around  mt-[4%] ml-[3%] randesc-holder">
       <h1 className="w-[70%] text-[3.2rem] text-[white] font-[500] movie-title">
-        YOUR BOYFRIEND IS MINE
+        {randTitle}
       </h1>
       <h2 className="w-[70%] text-[1.3rem] text-[white] movie-descr">
-        A fictional history of two legendary revolutionaries' journey away from
-        home before they began fighting for their country in the 1920s.
+        {randOverview}
       </h2>
       <div className="h-[30%] w-[35%] flex items-center justify-around movbtns-holder">
         <button

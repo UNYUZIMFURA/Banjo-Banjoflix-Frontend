@@ -3,14 +3,14 @@ import { atom } from "recoil";
 // Default will only hold the id of one question
 
 export const hasToken = atom({
-key: "hasToken",
-default: false,
-})
+  key: "hasToken",
+  default: true,
+});
 
 export const currentMov = atom({
   key: "currentMov",
-  default: ""
-})
+  default: "",
+});
 
 export const activeNow = atom({
   key: "activeNow",
@@ -27,37 +27,47 @@ export const emailEntered = atom({
   default: "",
 });
 
+export const randomTitle = atom({
+  key: "randomTitle",
+  default: "",
+});
+
+export const randomOverview = atom({
+  key: "randomOverview",
+  default: "",
+});
+
 export const title = atom({
-key: "title", 
-default: ""
-})
+  key: "title",
+  default: "",
+});
 
 export const overview = atom({
   key: "overview",
-  default: ""
-})
+  default: "",
+});
 
 export const air_date = atom({
   key: "air_date",
-  default: ""
-})
+  default: "",
+});
 
 export const genres = atom({
   key: "genres",
-  default: ""
-})
+  default: "",
+});
 
 export const originalLanguage = atom({
   key: "originalLanguage",
-  default: ""
-})
+  default: "",
+});
 
 export const vote_average = atom({
   key: "vote_average",
-  default: ""
-})
+  default: "",
+});
 
 export const vote_count = atom({
   key: "vote_account",
-  default: ""
-})
+  default: "",
+});

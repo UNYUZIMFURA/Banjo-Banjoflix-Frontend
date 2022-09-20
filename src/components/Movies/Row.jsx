@@ -49,7 +49,7 @@ const Row = (props) => {
     if (trailerUrl) {
       setTrailerUrl("");
     } else {
-      setChangeTitle(mov.title || "")
+      setChangeTitle(mov.title || "");
       setChangeOverview(mov.overview || "");
       setChangeDate(mov.first_air_date || mov.release_date || "");
       setChangeLang(mov.original_language || "");
