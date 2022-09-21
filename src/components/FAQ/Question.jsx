@@ -12,20 +12,9 @@ const Question = (props) => {
   // Function to make sure only one question is open
 
   function Toggle() {
-    // handleClicks();
     setVisibility((prevVisibility) => !prevVisibility);
     setActiveQuest(props.id);
   }
-
-  // function handleClicks() {
-  //   let question = document.getElementById(props.id);
-  //   setCount((prevCount) => prevCount + 1);
-  //   if (count % 2 === 0) {
-  //     question.style.marginBottom = "0.55rem";
-  //   } else if (count % 2 !== 0) {
-  //     question.style.marginBottom = 0;
-  //   }
-  // }
 
   return (
     <div className="w-full flex flex-col justify-between">

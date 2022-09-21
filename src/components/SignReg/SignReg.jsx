@@ -18,12 +18,13 @@ const SignReg = () => {
               Account Created Successfully
             </h2>
             <h2 className="w-4/5 text-center text-[#333] text-[1.2rem] leading-[1.8rem] txt-2">
-              Banjoflix is personalized for you. You are authorized to watch at any device, anytime!
+              Banjoflix is personalized for you. You are authorized to watch at
+              any device, anytime!
             </h2>
           </div>
           <Link
             to="/browse"
-            className="flex items-center justify-center h-[4rem] w-[92%] text-[white] text-[1.3rem] bg-[#e50914] rounded-[3px] mt-[1rem]"
+            className="h-[4rem] w-[92%] flex items-center justify-center text-[white] text-[1.3rem] bg-[#e50914] rounded-[3px] mt-[1rem]"
           >
             Next
           </Link>

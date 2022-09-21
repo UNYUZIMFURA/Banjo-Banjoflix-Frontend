@@ -16,12 +16,12 @@ const Start = () => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    setHomeEmail(email)
+    setHomeEmail(email);
     navigate("/signup/password");
   }
 
   return (
-    <form className="flex w-full text-[#fff] start" onSubmit={handleSubmit}>
+    <form className="w-full flex text-[#fff] start" onSubmit={handleSubmit}>
       <input
         type="email"
         onChange={handleChange}

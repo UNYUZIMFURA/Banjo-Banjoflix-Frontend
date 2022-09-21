@@ -5,9 +5,8 @@ import { useNavigate } from "react-router-dom";
 import "./Login.css";
 
 const Login = () => {
-  const [movieAccess, setMovieAccess] = useRecoilState(hasToken)
+  const [movieAccess, setMovieAccess] = useRecoilState(hasToken);
   const navigate = useNavigate();
-  const [message, setMessage] = useState("");
   const [submitTriggered, setSubmitTriggered] = useState(false);
   const [formData, setFormData] = useState({
     emailLogin: "",
@@ -31,8 +30,8 @@ const Login = () => {
 
   useEffect(() => {
     function giveUserAccess() {
-      setMovieAccess(true)
-      navigate("/who")
+      setMovieAccess(true);
+      navigate("/who");
     }
 
     function setError(errorMessage) {
@@ -42,7 +41,6 @@ const Login = () => {
     }
 
     function fetchData() {
-      console.log({ formData });
       fetch("http://localhost:3020/login", {
         headers: {
           "Content-Type": "application/json",
@@ -71,10 +69,7 @@ const Login = () => {
         </a>
       </div>
       <div className="h-[70vh] w-[24.5%] flex flex-col items-center justify-evenly bg-[rgba(0,0,0,.75)] mb-[7rem] sign-form">
-        <h3
-          className="text-[orange] hidden"
-          id="passError"
-        ></h3>
+        <h3 className="text-[orange] hidden" id="passError"></h3>
         <div className="h-[50%] w-full flex flex-col justify-between">
           <h2 className="text-[#fff] text-[2rem] font-bold ml-[4.5rem]">
             Sign In

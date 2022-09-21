@@ -33,7 +33,7 @@ const Lost = () => {
             </h2>
           </div>
         </div>
-        <div className="h-[19%] flex justify-end items-center  from-txt">
+        <div className="h-[19%] flex justify-end items-center from-txt">
           <h2 className="text-[1.3rem] text-[#737373] font-[200] mr-[5.5rem] cursor-pointer">
             FROM <span className="text-[white] font-[400]">LOST IN SPACE</span>
           </h2>

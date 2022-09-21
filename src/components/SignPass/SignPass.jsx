@@ -7,7 +7,7 @@ import Header from "../CodeReduction/Header";
 import { useNavigate } from "react-router-dom";
 
 const SignPass = () => {
-  const [giveAccess, setGiveAccess] = useRecoilState(hasToken)
+  const [giveAccess, setGiveAccess] = useRecoilState(hasToken);
   const [submitTriggered2, setSubmitTriggered2] = useState(false);
   const [emailSubmit, setEmailSubmit] = useRecoilState(emailEntered);
   const navigate = useNavigate();
@@ -24,8 +24,8 @@ const SignPass = () => {
 
   useEffect(() => {
     function giveUserAccess() {
-      setGiveAccess(true)
-      navigate("/signup")
+      setGiveAccess(true);
+      navigate("/signup");
     }
 
     function setError(errorMessage) {
@@ -59,7 +59,7 @@ const SignPass = () => {
         <Header />
         <div className="h-[80%] w-[26%] flex flex-col signup-holder">
           <div className="h-[30%] w-full flex flex-col justify-between ">
-          <h2 className="text-[orange] hidden" id="signError"></h2>
+            <h2 className="text-[orange] hidden" id="signError"></h2>
             <div>
               <h2 className="text-[2rem] text-[#333] font-medium leading-[2.5rem]">
                 Welcome Here! <br />
@@ -74,7 +74,11 @@ const SignPass = () => {
             <div className="h-[20%]flex flex-col justify-around">
               <h3 className="text-[#333]">Email</h3>
               <h3 className="text-[#333] font-medium text-[1rem]">
-                {emailSubmit || <h3 className="text-[#e50914] text-[1rem] font-medium">Provide an Email !</h3>}
+                {emailSubmit || (
+                  <h3 className="text-[#e50914] text-[1rem] font-medium">
+                    Provide an Email !
+                  </h3>
+                )}
               </h3>
             </div>
             <form

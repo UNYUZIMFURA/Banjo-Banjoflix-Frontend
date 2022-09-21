@@ -39,7 +39,7 @@ const ChoosePlan = () => {
             mb="0.6rem"
           />
           <button
-            className="h-[4rem] w-[92%]  text-[1.2rem] text-[#fff] rounded-[3px] bg-[#e50914] mt-[1.5rem]"
+            className="h-[4rem] w-[92%] text-[1.2rem] text-[#fff] rounded-[3px] bg-[#e50914] mt-[1.5rem]"
             onClick={() => navigate("/signup/planform")}
           >
             Next

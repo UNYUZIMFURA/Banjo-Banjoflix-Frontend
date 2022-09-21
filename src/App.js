@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Protect from "./utils/Protect";
@@ -15,21 +14,21 @@ import Lost from "./components/Lost/Lost";
 const App = () => {
   return (
     <div>
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route element={<Protect />}>
-              <Route path="/who" element={<WhoIs />} />
-              <Route path="/browse" element={<Movies />} />
-            </Route>
-            <Route path="login" element={<Login />} />
-            <Route path="/signup/password" element={<SignPass />} />
-            <Route path="/signup" element={<ChoosePlan />} />
-            <Route path="/signup/planform" element={<PlanForm />} />
-            <Route path="/signup/registration" element={<SignReg />} />
-            <Route path="*" element={<Lost />} />
-          </Routes>
-        </BrowserRouter>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route element={<Protect />}>
+            <Route path="/who" element={<WhoIs />} />
+            <Route path="/browse" element={<Movies />} />
+          </Route>
+          <Route path="login" element={<Login />} />
+          <Route path="/signup/password" element={<SignPass />} />
+          <Route path="/signup" element={<ChoosePlan />} />
+          <Route path="/signup/planform" element={<PlanForm />} />
+          <Route path="/signup/registration" element={<SignReg />} />
+          <Route path="*" element={<Lost />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 };

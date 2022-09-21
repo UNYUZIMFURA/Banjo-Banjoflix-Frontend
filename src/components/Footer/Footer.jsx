@@ -5,7 +5,7 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <div className="h-[34.5vh] flex flex-col items-center justify-around bg-[#000]">
-      <h2 className="text-[#737373]  mt-[2rem] mr-[31%]">
+      <h2 className="text-[#737373] mt-[2rem] mr-[31%]">
         Question? Contact Us.
       </h2>
       <div className="h-[55%] w-[45%] flex items-center justify-around links-holder">
