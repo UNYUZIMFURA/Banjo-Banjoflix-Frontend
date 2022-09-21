@@ -41,7 +41,7 @@ const Login = () => {
     }
 
     function fetchData() {
-      fetch("http://localhost:3020/login", {
+      fetch("https://banjoflix-backend.herokuapp.com/login", {
         headers: {
           "Content-Type": "application/json",
         },

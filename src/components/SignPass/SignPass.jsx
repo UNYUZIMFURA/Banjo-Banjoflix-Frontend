@@ -35,7 +35,7 @@ const SignPass = () => {
     }
 
     function fetchData() {
-      fetch("http://localhost:3020/signup", {
+      fetch("https://banjoflix-backend.herokuapp.com/signup", {
         headers: {
           "Content-Type": "application/json",
         },
