@@ -1,16 +1,16 @@
 import { useState } from "react";
 import { useRecoilState } from "recoil";
 import {
+  currentMov,
+  title,
+  overview,
   randSelected,
   movieSelected,
-  currentMov,
-  air_date,
   genres,
+  air_date,
   originalLanguage,
   vote_average,
   vote_count,
-  overview,
-  title,
 } from "../../atoms";
 import { BiLike } from "react-icons/bi";
 import { FaPlay } from "react-icons/fa";
@@ -30,7 +30,7 @@ const MovieBox = () => {
   const [watchMovie, setWatchMovie] = useRecoilState(currentMov);
   const [likeState, setLikeState] = useState(false);
   const [hasSelected, setHasSeleted] = useRecoilState(movieSelected);
-  const [closeRand, setCloseRand] = useRecoilState(randSelected)
+  const [closeRand, setCloseRand] = useRecoilState(randSelected);
   const [soundState, setSoundState] = useState(true);
   const [movieTitle, setMovieTitle] = useRecoilState(title);
   const [movieOverview, setMovieOverview] = useRecoilState(overview);
@@ -46,17 +46,18 @@ const MovieBox = () => {
 
   function closeMovie() {
     setHasSeleted(false);
-    setCloseRand(false)
+    setCloseRand(false);
   }
+
   return (
     <div className="h-[88vh] w-[48%] flex flex-col fixed top-[4%] left-[25%] rounded-t-[5px] watch-movie">
       <div
-        className="flex items-center justify-center absolute top-[2%] right-[2%] min-h-[2.3rem] min-w-[2.3rem] bg-[#000] rounded-full cursor-pointer z-40 close-btn"
+        className="min-h-[2.3rem] min-w-[2.3rem] flex items-center justify-center absolute top-[2%] right-[2%] bg-[#000] rounded-full cursor-pointer z-40 close-btn"
         onClick={closeMovie}
       >
         <AiOutlineClose fill="white" size={20} onClick={closeMovie} />
       </div>
-      <div className="h-[10%] bg-[rgb(31, 31, 31)] w-full flex items-center justify-between absolute top-[52%] left-0 z-40">
+      <div className="h-[10%] w-full flex items-center justify-between absolute top-[52%] left-0 z-40 bg-[rgb(31, 31, 31)]">
         <div className="h-full w-[26%] flex items-center justify-around ml-[2rem] vid-btns">
           <button className="h-[52%] w-[50%] flex items-center justify-center rounded-[4px] bg-[#e5e7eb]">
             <span>

@@ -5,7 +5,6 @@ import {
   movieSelected,
   currentMov,
   air_date,
-  genres,
   originalLanguage,
   vote_average,
   vote_count,
@@ -18,10 +17,9 @@ import movieTrailer from "movie-trailer";
 
 const base_url = "https://image.tmdb.org/t/p/original/";
 const Row = (props) => {
-  const [controlMoviePlay, setControlMoviePlay] = useState(false);
   const [trailerUrl, setTrailerUrl] = useRecoilState(currentMov);
   const [isSelected, setIsSelected] = useRecoilState(movieSelected);
-  const [changeOverview, setChangeOverview] = useRecoilState(overview);
+  const [changeOverview,setChangeOverview] = useRecoilState(overview);
   const [changeDate, setChangeDate] = useRecoilState(air_date);
   const [changeLang, setChangeLang] = useRecoilState(originalLanguage);
   const [changeVotAvg, setChangeVotAvg] = useRecoilState(vote_average);
@@ -83,7 +81,6 @@ const Row = (props) => {
             key={movie.id}
             className="h-full min-w-[17.5rem] relative ml-[0.3rem] single-movie"
           >
-            {/* {console.log(movie)} */}
             <img
               src={`${base_url}${movie.poster_path}`}
               alt={movie.name}

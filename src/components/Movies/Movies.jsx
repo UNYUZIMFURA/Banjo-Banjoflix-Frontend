@@ -57,8 +57,6 @@ const Movies = () => {
     setChangeOverview(randomMovie.overview);
   }, [randomMovie]);
 
-  // console.log(randomMovie)
-
   useEffect(() => {
     if (randomSelected) {
       doubleCall(randomMovie);
@@ -74,7 +72,6 @@ const Movies = () => {
     if (randUrl) {
       setRandUrl("");
     } else {
-      console.log(`This is it ${mov}`)
       setRandOverview(mov.overview);
       setRandDate(mov?.first_air_date || mov?.release_date);
       setRandLang(mov.original_language);

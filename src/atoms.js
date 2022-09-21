@@ -1,7 +1,5 @@
 import { atom } from "recoil";
 
-// Default will only hold the id of one question
-
 export const hasToken = atom({
   key: "hasToken",
   default: true,
