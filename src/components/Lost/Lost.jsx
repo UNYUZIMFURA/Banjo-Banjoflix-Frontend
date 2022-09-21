@@ -14,8 +14,8 @@ const Lost = () => {
           BANJOFLIX
         </h1>
       </div>
-      <div className="h-[24vh] ">
-        <img src={LostImg} alt="" className="h-full w-full object-cover"/>
+      <div className="h-[24vh] flex items-center justify-center text-[10rem] text-[#e50914]">
+        <h1>404</h1>
       </div>
       <div className="h-[70vh] flex flex-col justify-between lost-all-holder">
         <div className="h-[61%] flex flex-col items-center justify-between lost-holder">
