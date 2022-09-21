@@ -11,12 +11,12 @@
   text-transform: uppercase;
 }
 
-.test {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
 .movie-desc {
   background-color: rgb(31, 31, 31);
+}
+
+.test {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .trending-holder {
@@ -49,12 +49,6 @@
   }
 }
 
-@media only screen and (max-width: 1605px) {
-  .movie-descr {
-    width: 100%;
-  }
-}
-
 @media only screen and (max-width: 1700px) {
   .single-row {
     margin-left: 0;
@@ -63,6 +57,12 @@
   .watch-movie {
     width: 60%;
     left: 20%;
+  }
+}
+
+@media only screen and (max-width: 1605px) {
+  .movie-descr {
+    width: 100%;
   }
 }
 
