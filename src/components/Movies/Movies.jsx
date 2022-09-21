@@ -36,34 +36,41 @@ const Movies = () => {
   useEffect(() => {
     async function fetchData() {
       const req = await axio.get(request.fetchNetflixOriginals);
-      // console.log(req.data);
       setRandomMovie(
         req.data.results[
           Math.floor(Math.random() * req.data.results.length - 1)
         ]
       );
-      setChangeTitle(
-        randomMovie?.title || randomMovie?.name || randomMovie?.original_name
-      );
-      setChangeOverview(randomMovie.overview);
-      return req;
     }
     fetchData();
   }, []);
-  // function setRandDetails() {
-  //   console.log("clickedinthe");
-  //   setRandOverview(randomMovie.overview);
-  //   setRandDate(randomMovie?.first_air_date || randomMovie?.release_date);
-  //   setRandLang(randomMovie.original_language);
-  //   setRandVotAvg(randomMovie.vote_average);
-  //   setRandCount(randomMovie.vote_count);
-  //   setRandTitle(
-  //     randomMovie?.name ||
-  //       randomMovie?.original_name ||
+
+  useEffect(() => {
+    setChangeTitle(
+      randomMovie?.title || randomMovie?.name || randomMovie?.original_name
+    );
+    setChangeOverview(randomMovie.overview);
+  }, [randomMovie]);
+
+  // useEffect(() => {
+  //   function setRandDetails() {
+  //     console.log("clicke=dinthe");
+  //     setRandOverview(randomMovie.overview);
+  //     setRandDate(randomMovie?.first_air_date || randomMovie?.release_date);
+  //     setRandLang(randomMovie.original_language);
+  //     setRandVotAvg(randomMovie.vote_average);
+  //     setRandCount(randomMovie.vote_count);
+  //     setRandTitle(
   //       randomMovie?.name ||
-  //       randomMovie?.title
-  //   );
-  // }
+  //         randomMovie?.original_name ||
+  //         randomMovie?.name ||
+  //         randomMovie?.title
+  //     );
+  //   }
+  //   setRandDetails()
+  // }, [randomMovie]);
+
+  console.log(randomMovie);
 
   const [hasSelected, setHasSeleted] = useRecoilState(movieSelected);
 
