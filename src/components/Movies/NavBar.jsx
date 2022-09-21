@@ -7,7 +7,7 @@ import AccountImg from "../../images/avatar.png";
 const NavBar = () => {
   return (
     <div className="h-[10%] w-full fixed top-0 text-[#fff] flex items-center justify-between z-10 nav">
-      <div className="w-[48%]  flex justify-between items-center ml-[3%] genres-holder">
+      <div className="w-[48%] flex justify-between items-center ml-[3%] genres-holder">
         <a href="/">
           <h1 className="text-3xl text-[#e50914] font-bold cursor-pointer logo">
             BANJOFLIX
@@ -22,7 +22,7 @@ const NavBar = () => {
           <h3 className="">Browse by Languages</h3>
         </div>
       </div>
-      <div className="w-[15%] h-1/2  flex justify-between items-center mr-[3%] cursor-pointer selection-types">
+      <div className="w-[15%] h-1/2 flex justify-between items-center mr-[3%] cursor-pointer selection-types">
         <FiSearch />
         <h3>Kids</h3>
         <h3>DVD</h3>

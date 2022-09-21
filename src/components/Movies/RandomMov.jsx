@@ -1,6 +1,11 @@
 import { FaInfoCircle, FaPlay } from "react-icons/fa";
 import { useRecoilState } from "recoil";
-import { movieSelected, randSelected, randomTitle, randomOverview } from "../../atoms";
+import {
+  movieSelected,
+  randSelected,
+  randomTitle,
+  randomOverview,
+} from "../../atoms";
 
 const RandomMov = () => {
   const [randTitle, setRandTitle] = useRecoilState(randomTitle);

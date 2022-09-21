@@ -30,6 +30,11 @@ export const emailEntered = atom({
   default: "",
 });
 
+export const title = atom({
+  key: "title",
+  default: "",
+});
+
 export const randomTitle = atom({
   key: "randomTitle",
   default: "",
@@ -37,11 +42,6 @@ export const randomTitle = atom({
 
 export const randomOverview = atom({
   key: "randomOverview",
-  default: "",
-});
-
-export const title = atom({
-  key: "title",
   default: "",
 });
 

@@ -16,10 +16,11 @@ import { FiPlay } from "react-icons/fi";
 import movieTrailer from "movie-trailer";
 
 const base_url = "https://image.tmdb.org/t/p/original/";
+
 const Row = (props) => {
   const [trailerUrl, setTrailerUrl] = useRecoilState(currentMov);
   const [isSelected, setIsSelected] = useRecoilState(movieSelected);
-  const [changeOverview,setChangeOverview] = useRecoilState(overview);
+  const [changeOverview, setChangeOverview] = useRecoilState(overview);
   const [changeDate, setChangeDate] = useRecoilState(air_date);
   const [changeLang, setChangeLang] = useRecoilState(originalLanguage);
   const [changeVotAvg, setChangeVotAvg] = useRecoilState(vote_average);
