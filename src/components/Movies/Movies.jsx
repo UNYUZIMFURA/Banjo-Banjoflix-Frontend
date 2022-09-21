@@ -57,10 +57,10 @@ const Movies = () => {
     setChangeOverview(randomMovie.overview);
   }, [randomMovie]);
 
-console.log(randomMovie)
+  // console.log(randomMovie)
 
   useEffect(() => {
-    doubleCall(randomMovie);
+    console.log("Lemme llok");
   }, [randomSelected]);
 
   function doubleCall(randMov) {
@@ -78,20 +78,19 @@ console.log(randomMovie)
       setRandVotAvg(mov.vote_average);
       setRandCount(mov.vote_count);
       setRandTitle(mov?.name || mov?.original_name || mov?.name || mov?.title);
+      movieTrailer(
+        mov?.name ||
+          mov?.title ||
+          mov?.original_title ||
+          mov?.original_name || { tmdbId: mov.id }
+      )
+        .then((url) => {
+          const urlParams = new URLSearchParams(new URL(url).search);
+          setRandUrl(urlParams.get("v"));
+        })
+        .catch((err) => console.log(err));
     }
-    movieTrailer(
-      mov?.name ||
-        mov?.title ||
-        mov?.original_title ||
-        mov?.original_name || { tmdbId: mov.id }
-    )
-      .then((url) => {
-        const urlParams = new URLSearchParams(new URL(url).search);
-        setRandUrl(urlParams.get("v"));
-      })
-      .catch((err) => console.log(err));
   }
-
 
   return (
     <div className="flex flex-col justify-around relative">
