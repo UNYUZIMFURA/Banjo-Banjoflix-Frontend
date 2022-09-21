@@ -60,9 +60,8 @@ const Movies = () => {
   // console.log(randomMovie)
 
   useEffect(() => {
-    if(randomSelected) {
-      console.log('Detect runs')
-      doubleCall()
+    if (randomSelected) {
+      doubleCall(randomMovie);
     }
   }, [randomSelected]);
 
@@ -75,6 +74,7 @@ const Movies = () => {
     if (randUrl) {
       setRandUrl("");
     } else {
+      console.log(`This is it ${mov}`)
       setRandOverview(mov.overview);
       setRandDate(mov?.first_air_date || mov?.release_date);
       setRandLang(mov.original_language);

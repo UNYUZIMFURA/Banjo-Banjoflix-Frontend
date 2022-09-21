@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useRecoilState } from "recoil";
 import {
+  randSelected,
   movieSelected,
   currentMov,
   air_date,
@@ -29,6 +30,7 @@ const MovieBox = () => {
   const [watchMovie, setWatchMovie] = useRecoilState(currentMov);
   const [likeState, setLikeState] = useState(false);
   const [hasSelected, setHasSeleted] = useRecoilState(movieSelected);
+  const [closeRand, setCloseRand] = useRecoilState(randSelected)
   const [soundState, setSoundState] = useState(true);
   const [movieTitle, setMovieTitle] = useRecoilState(title);
   const [movieOverview, setMovieOverview] = useRecoilState(overview);
@@ -44,6 +46,7 @@ const MovieBox = () => {
 
   function closeMovie() {
     setHasSeleted(false);
+    setCloseRand(false)
   }
   return (
     <div className="h-[88vh] w-[48%] flex flex-col fixed top-[4%] left-[25%] rounded-t-[5px] watch-movie">
