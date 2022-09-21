@@ -2,7 +2,7 @@ import { atom } from "recoil";
 
 export const hasToken = atom({
   key: "hasToken",
-  default: true,
+  default: false,
 });
 
 export const currentMov = atom({

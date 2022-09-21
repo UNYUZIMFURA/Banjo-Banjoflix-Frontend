@@ -47,7 +47,7 @@ const SignPass = () => {
       })
         .then((res) => res.json())
         .then((data) =>
-          data.message == "Ok" ? giveUserAccess() : setError(data.message)
+          data.message == "Token Sent" ? giveUserAccess() : setError(data.message)
         );
     }
     fetchData();
