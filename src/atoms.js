@@ -22,6 +22,11 @@ export const movieSelected = atom({
   default: false,
 });
 
+export const randSelected = atom({
+  key: "randSelected",
+  default: false,
+});
+
 export const emailEntered = atom({
   key: "emailEntered",
   default: "",

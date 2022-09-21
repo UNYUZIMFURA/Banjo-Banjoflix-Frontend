@@ -2,12 +2,13 @@ import "./Movies.css";
 import { useState, useEffect } from "react";
 import { useRecoilState } from "recoil";
 import {
+  randSelected,
+  currentMov,
   movieSelected,
   randomTitle,
   randomOverview,
   overview,
   air_date,
-  genres,
   originalLanguage,
   vote_average,
   vote_count,
@@ -20,9 +21,13 @@ import MovieBox from "./MovieBox";
 import requests from "./Fetch";
 import Row from "./Row";
 import NavBar from "./NavBar";
+import movieTrailer from "movie-trailer";
 
 const base_url = "https://image.tmdb.org/t/p/original/";
 const Movies = () => {
+  const [randUrl, setRandUrl] = useRecoilState(currentMov);
+  const [randomSelected, setRandomSelected] = useRecoilState(randSelected);
+  const [hasSelected, setHasSelected] = useRecoilState(movieSelected);
   const [changeTitle, setChangeTitle] = useRecoilState(randomTitle);
   const [changeOverview, setChangeOverview] = useRecoilState(randomOverview);
   const [randOverview, setRandOverview] = useRecoilState(overview);
@@ -52,27 +57,41 @@ const Movies = () => {
     setChangeOverview(randomMovie.overview);
   }, [randomMovie]);
 
-  // useEffect(() => {
-  //   function setRandDetails() {
-  //     console.log("clicked inthe");
-  //     setRandOverview(randomMovie.overview);
-  //     setRandDate(randomMovie?.first_air_date || randomMovie?.release_date);
-  //     setRandLang(randomMovie.original_language);
-  //     setRandVotAvg(randomMovie.vote_average);
-  //     setRandCount(randomMovie.vote_count);
-  //     setRandTitle(
-  //       randomMovie?.name ||
-  //         randomMovie?.original_name ||
-  //         randomMovie?.name ||
-  //         randomMovie?.title
-  //     );
-  //   }
-  //   setRandDetails()
-  // }, [randomMovie]);
+console.log(randomMovie)
 
-  console.log(randomMovie);
+  useEffect(() => {
+    doubleCall(randomMovie);
+  }, [randomSelected]);
 
-  const [hasSelected, setHasSeleted] = useRecoilState(movieSelected);
+  function doubleCall(randMov) {
+    handleRand(randMov);
+    setRandomSelected(true);
+  }
+
+  function handleRand(mov) {
+    if (randUrl) {
+      setRandUrl("");
+    } else {
+      setRandOverview(mov.overview);
+      setRandDate(mov?.first_air_date || mov?.release_date);
+      setRandLang(mov.original_language);
+      setRandVotAvg(mov.vote_average);
+      setRandCount(mov.vote_count);
+      setRandTitle(mov?.name || mov?.original_name || mov?.name || mov?.title);
+    }
+    movieTrailer(
+      mov?.name ||
+        mov?.title ||
+        mov?.original_title ||
+        mov?.original_name || { tmdbId: mov.id }
+    )
+      .then((url) => {
+        const urlParams = new URLSearchParams(new URL(url).search);
+        setRandUrl(urlParams.get("v"));
+      })
+      .catch((err) => console.log(err));
+  }
+
 
   return (
     <div className="flex flex-col justify-around relative">
@@ -84,7 +103,7 @@ const Movies = () => {
       >
         <NavBar />
         <RandomMov />
-        {hasSelected ? (
+        {hasSelected || randomSelected ? (
           <div className="h-screen w-full fixed top-0 z-10 test">
             <MovieBox />
           </div>

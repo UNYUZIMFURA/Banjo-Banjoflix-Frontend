@@ -1,11 +1,11 @@
 import { FaInfoCircle, FaPlay } from "react-icons/fa";
 import { useRecoilState } from "recoil";
-import { movieSelected, randomTitle, randomOverview } from "../../atoms";
+import { movieSelected, randSelected, randomTitle, randomOverview } from "../../atoms";
 
 const RandomMov = () => {
   const [randTitle, setRandTitle] = useRecoilState(randomTitle);
   const [randOverview, setRandOverview] = useRecoilState(randomOverview);
-  const [hasPlayed, setHasPlayed] = useRecoilState(movieSelected);
+  const [hasPlayed, setHasPlayed] = useRecoilState(randSelected);
   return (
     <div className="h-[35%] w-1/2 flex flex-col items-start justify-around  mt-[4%] ml-[3%] randesc-holder">
       <h1 className="w-[70%] text-[3.2rem] text-[white] font-[500] movie-title">

@@ -23,7 +23,6 @@ const Row = (props) => {
   const [isSelected, setIsSelected] = useRecoilState(movieSelected);
   const [changeOverview, setChangeOverview] = useRecoilState(overview);
   const [changeDate, setChangeDate] = useRecoilState(air_date);
-  const [changeGenre, setChangeGenre] = useRecoilState(genres);
   const [changeLang, setChangeLang] = useRecoilState(originalLanguage);
   const [changeVotAvg, setChangeVotAvg] = useRecoilState(vote_average);
   const [changeCount, setChangeCount] = useRecoilState(vote_count);
