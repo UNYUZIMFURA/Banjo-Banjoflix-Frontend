@@ -60,7 +60,10 @@ const Movies = () => {
   // console.log(randomMovie)
 
   useEffect(() => {
-    console.log("Lemme llok");
+    if(randomSelected) {
+      console.log('Detect runs')
+      doubleCall()
+    }
   }, [randomSelected]);
 
   function doubleCall(randMov) {
