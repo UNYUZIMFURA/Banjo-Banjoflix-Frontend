@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import LostImg from "../../images/lost.png";
 import "./Lost.css";
 
 const Lost = () => {
@@ -13,10 +14,14 @@ const Lost = () => {
           BANJOFLIX
         </h1>
       </div>
-      <div className="h-[24vh] "></div>
+      <div className="h-[24vh] ">
+        <img src={LostImg} alt="" className="h-full w-full object-cover"/>
+      </div>
       <div className="h-[70vh] flex flex-col justify-between lost-all-holder">
         <div className="h-[61%] flex flex-col items-center justify-between lost-holder">
-          <h1 className="text-[#fff] text-[5rem] font-[500] lost-txt">Lost your way?</h1>
+          <h1 className="text-[#fff] text-[5rem] font-[500] lost-txt">
+            Lost your way?
+          </h1>
           <p className="text-[#fff] text-[1.5rem] font-[300] lost-para">
             Sorry, we can't find that page. You'll find lots to explore on the
             home page.
