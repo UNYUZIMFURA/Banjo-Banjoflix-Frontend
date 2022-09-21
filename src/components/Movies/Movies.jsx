@@ -54,7 +54,7 @@ const Movies = () => {
 
   // useEffect(() => {
   //   function setRandDetails() {
-  //     console.log("clicke=dinthe");
+  //     console.log("clicked inthe");
   //     setRandOverview(randomMovie.overview);
   //     setRandDate(randomMovie?.first_air_date || randomMovie?.release_date);
   //     setRandLang(randomMovie.original_language);
