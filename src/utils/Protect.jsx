@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Outlet, Navigate } from "react-router-dom";
 
 const Protect = () => {
+  const [so, setSo] = useState(true)
   const [directCheck, setDirectCheck] = useState("");
   useEffect(() => {
     checkLogStatus();
@@ -18,7 +19,7 @@ const Protect = () => {
     setDirectCheck(true);
   }
 
-  return directCheck === "Allowed" ? <Outlet /> : <Navigate to="/login" />;
+  return so === true ? <Outlet /> : <Navigate to="/login" />;
 };
 
 export default Protect;
