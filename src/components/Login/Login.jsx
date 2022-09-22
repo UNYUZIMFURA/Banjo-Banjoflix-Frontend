@@ -7,7 +7,6 @@ import "./Login.css";
 const Login = () => {
   const [movieAccess, setMovieAccess] = useRecoilState(hasToken);
   const navigate = useNavigate();
-  const [submitTriggered, setSubmitTriggered] = useState(false);
   const [formData, setFormData] = useState({
     emailLogin: "",
     passwordLogin: "",
@@ -15,7 +14,7 @@ const Login = () => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    setSubmitTriggered((prevTriggered) => !prevTriggered);
+    fetchData();
   }
 
   function handleChange(e) {
@@ -28,39 +27,33 @@ const Login = () => {
     });
   }
 
-  useEffect(() => {
-    function giveUserAccess() {
-      window.localStorage.setItem('login', 'Allowed')
-      setMovieAccess("Allowed");
-      navigate("/who");
-    }
+  async function giveUserAccess() {
+    await window.localStorage.setItem("login", "Allowed");
+    navigate("/who");
+  }
 
-    function setError(errorMessage) {
-      const passError = document.getElementById("passError");
-      passError.style.display = "block";
-      passError.textContent = errorMessage;
-    }
+  function setError(errorMessage) {
+    const passError = document.getElementById("passError");
+    passError.style.display = "block";
+    passError.textContent = errorMessage;
+  }
 
-    function fetchData() {
-      fetch("https://banjoflix-backend.herokuapp.com/login", {
-        headers: {
-          "Content-Type": "application/json",
-        },
-        method: "POST",
-        body: JSON.stringify({
-          email: formData.emailLogin,
-          password: formData.passwordLogin,
-        }),
-      })
-        .then((res) => res.json())
-        .then((data) =>
-          data.message == "Token Sent"
-            ? giveUserAccess()
-            : setError(data.message)
-        );
-    }
-    fetchData();
-  }, [submitTriggered]);
+  function fetchData() {
+    fetch("https://banjoflix-backend.herokuapp.com/login", {
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+      body: JSON.stringify({
+        email: formData.emailLogin,
+        password: formData.passwordLogin,
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) =>
+        data.message == "Token Sent" ? giveUserAccess() : setError(data.message)
+      );
+  }
 
   return (
     <div className="h-[115vh] flex flex-col items-center justify-around text-[#fff] wrapper">
