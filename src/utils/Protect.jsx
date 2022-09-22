@@ -15,7 +15,7 @@ const Protect = () => {
 
   function directTheUser() {
     const data = window.localStorage.getItem("userRedirect");
-    setDirectCheck(data);
+    setDirectCheck(true);
   }
 
   return directCheck === "Allowed" ? <Outlet /> : <Navigate to="/login" />;
