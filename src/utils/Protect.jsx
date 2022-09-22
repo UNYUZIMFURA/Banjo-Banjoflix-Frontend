@@ -1,22 +1,24 @@
 import { useState, useEffect } from "react";
-import { useRecoilState } from "recoil";
-import { hasToken } from "../atoms";
 import { Outlet, Navigate } from "react-router-dom";
 
 const Protect = () => {
-  const [directCheck, setDirectCheck] = useState(true);
-  const [gotAccess, setGotAccess] = useRecoilState(hasToken);
+  const [directCheck, setDirectCheck] = useState("");
   useEffect(() => {
-    window.localStorage.setItem("userRedirect", gotAccess);
-  }, [gotAccess]);
-
-  useEffect(() => {
-    const data = window.localStorage.getItem("userRedirect");
-    console.log(`This data ${data}`)
-    setDirectCheck(data);
+    checkLogStatus();
+    directTheUser();
   }, []);
-  console.log(`This direct check ${directCheck}`);
-  return directCheck ? <Outlet /> : <Navigate to="/login" />;
+
+  function checkLogStatus() {
+    const logged = window.localStorage.getItem("login");
+    window.localStorage.setItem("userRedirect", logged);
+  }
+
+  function directTheUser() {
+    const data = window.localStorage.getItem("userRedirect");
+    setDirectCheck(data);
+  }
+
+  return directCheck === "Allowed" ? <Outlet /> : <Navigate to="/login" />;
 };
 
 export default Protect;

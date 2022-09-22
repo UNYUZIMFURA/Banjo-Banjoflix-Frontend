@@ -30,7 +30,8 @@ const Login = () => {
 
   useEffect(() => {
     function giveUserAccess() {
-      setMovieAccess(true);
+      window.localStorage.setItem('login', 'Allowed')
+      setMovieAccess("Allowed");
       navigate("/who");
     }
 
