@@ -1,11 +1,8 @@
-import { useState, useEffect } from "react";
-import { useRecoilState } from "recoil";
-import { hasToken } from "../../atoms";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
 
 const Login = () => {
-  const [movieAccess, setMovieAccess] = useRecoilState(hasToken);
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     emailLogin: "",

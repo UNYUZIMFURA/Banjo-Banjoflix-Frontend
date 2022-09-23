@@ -1,14 +1,12 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useRecoilState } from "recoil";
-import { emailEntered, hasToken } from "../../atoms";
+import { emailEntered } from "../../atoms";
 import "./SignPass.css";
 import Footer2 from "../CodeReduction/Footer2";
 import Header from "../CodeReduction/Header";
 import { useNavigate } from "react-router-dom";
 
 const SignPass = () => {
-  const [giveAccess, setGiveAccess] = useRecoilState(hasToken);
-  const [submitTriggered2, setSubmitTriggered2] = useState(false);
   const [emailSubmit, setEmailSubmit] = useRecoilState(emailEntered);
   const navigate = useNavigate();
   const [password, setPassword] = useState("");
@@ -19,39 +17,36 @@ const SignPass = () => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    setSubmitTriggered2((prevTriggered2) => !prevTriggered2);
+    fetchData();
   }
 
-  useEffect(() => {
-    function giveUserAccess() {
-      setGiveAccess(true);
-      navigate("/signup");
-    }
+  async function giveUserAccess() {
+    await window.localStorage.setItem("login", "Allowed");
+    navigate("/signup");
+  }
 
-    function setError(errorMessage) {
-      const signError = document.getElementById("signError");
-      signError.style.display = "block";
-      signError.textContent = errorMessage;
-    }
+  function setError(errorMessage) {
+    const signError = document.getElementById("signError");
+    signError.style.display = "block";
+    signError.textContent = errorMessage;
+  }
 
-    function fetchData() {
-      fetch("https://banjoflix-backend.herokuapp.com/signup", {
-        headers: {
-          "Content-Type": "application/json",
-        },
-        method: "POST",
-        body: JSON.stringify({
-          email: emailSubmit,
-          password,
-        }),
-      })
-        .then((res) => res.json())
-        .then((data) =>
-          data.message == "Token Sent" ? giveUserAccess() : setError(data.message)
-        );
-    }
-    fetchData();
-  }, [submitTriggered2]);
+  function fetchData() {
+    fetch("https://banjoflix-backend.herokuapp.com/signup", {
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+      body: JSON.stringify({
+        email: emailSubmit,
+        password,
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) =>
+        data.message == "Token Sent" ? giveUserAccess() : setError(data.message)
+      );
+  }
 
   return (
     <div className="h-screen flex flex-col justify-between">
