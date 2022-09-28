@@ -1,1 +1,1 @@
-# Banjoflix; A Netflix clone!
+# Banjoflix, A Netflix clone!
